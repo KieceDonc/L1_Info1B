@@ -1,0 +1,29 @@
+ body{
+    background-color:yellow;
+}
+h1{
+    background-color:#000000;
+    color: #ffffff;
+    font-size: 3em;
+    text-align: center;
+}
+h2{
+    background-color:#2bc700;
+    color:red;
+    font-size: 1.5em;
+}
+.R{
+    list-style-type: lower-roman;
+    color:RED;
+}
+.G{
+    list-style-type: lower-greek;
+    color:blue;
+}
+.oi{
+    color:purple;
+}
+.jth{ 
+    text-decoration-line: underline;
+    font-size: 1.2em;
+}

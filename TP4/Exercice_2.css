@@ -1,0 +1,43 @@
+.form_o, .form_t{
+    background-color:yellow;
+    border:3px pink solid;
+    width: 750px;
+}
+.separator{
+    background-color:#d2d2d2;
+    width: 750px;
+    height: 2px;
+}
+.PaiementPar{
+    margin-left: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.marginCB{
+    margin-right: 140px;
+}
+.fontsize{
+    font-size:20px;
+}
+.form_t{
+    height: 125px;
+}
+h1{
+    font-size: 45px;
+}
+.ZoneBouton{
+    display:block; 
+    margin:auto;
+}
+.form_three{
+    background-color:yellow;
+    border:3px pink solid;
+    width: 750px;
+    height: 100px;
+}
+.buttonn {
+    margin-top: 38px;
+    margin-left:313px;
+}

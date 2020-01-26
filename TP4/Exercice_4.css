@@ -1,0 +1,49 @@
+table{
+    border: 4px black solid;
+    border-spacing: 0px 0px;
+    margin-left:auto; 
+    margin-right:auto;
+}
+td, input{
+    width: 60px;
+    height: 60px;
+}
+td{
+    border: 1.5px black solid;
+}
+input{
+    text-align: center;
+    font-size: 40px;
+    border:0px solid black;
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.borderright{
+    border-right: 3.5px black solid;
+}
+.bordertop{
+    border-top: 3.5px black solid;
+}
+body{
+    text-align: center;
+}
+#Reset, #Check{
+    background-color: yellow;
+}
+#Reset{
+    color: red;
+    margin-top:25px;
+    font-size:0.8em;
+    width: 10em;
+    border: 3px outset rgb(0, 0, 0);
+}
+#Check{
+    color:blue;
+    margin-top:25px;
+    font-size:0.9em;
+    width: 4em;
+    border: 3px inset rgb(0, 0, 0);
+}

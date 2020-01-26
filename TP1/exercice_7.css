@@ -1,0 +1,61 @@
+*{
+	background-color: #FFA9AC;
+	font-style: none;
+}
+h1{
+	text-align: center;
+	text-decoration: underline black;
+	
+}
+.bordertop{
+	border-top: 3px gray solid; 
+}
+.Title1{
+	font-size: 2.5em;
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.Title2{
+	font-size: 2em;
+	font-weight: bold;
+}
+.Title3{
+	font-size: 2em;
+	font-weight: bold;
+	color:white;
+	text-align: center;
+	text-decoration: underline;
+}
+.Title4{
+	font-size: 2em;
+	font-weight: bold;
+	color:black;
+	text-align: center;
+	text-decoration: underline;
+}
+.text_1,.address_1{
+	font-size: 1.2em;
+c
+}
+.bold_effect{
+	font-weight: bold;
+}
+.underline_effect{
+	text-decoration: underline;
+}
+.RedB{
+	background-color: red;
+	margin-left:20%;
+	margin-right: 20%;
+	height: 20px;
+	width: 60%;
+
+}
+.GreenB{
+	background-color: green;
+		margin-left:20%;
+	margin-right: 20%;
+	height: 20px;
+	width: 60%;
+}

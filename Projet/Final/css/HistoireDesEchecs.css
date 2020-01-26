@@ -1,0 +1,330 @@
+/*
+ * Menu tout en haut
+ */
+
+ #Menu{
+    background-color: #0096BF;
+    height: 4em;
+    width: 100vw;
+    text-align: center;
+    margin-left:0;
+    padding:0;
+    position:fixed;
+    display: block;
+    z-index: 2;
+    border: 0.2em solid #003240;
+}
+.MenuHomeButton{
+    color:#B3B3B3;
+    text-decoration: underline;
+}
+.MenuSPANButton{
+    height: 100%;
+}
+.MenuOtherButton{
+    color:black;
+}
+.MenuOtherButton:hover{
+    color:#B3B3B3;
+    text-decoration: underline;
+}
+.MenuButton{
+    cursor:pointer;
+    margin-top: 1.3em;    
+    font-size:1em;
+    border:0px solid black;
+    background-color: #0096BF;
+    height: auto;
+}
+.MenuButtonMargin{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+#MenuImg{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    margin-top: 4.4em;
+}
+
+/*
+ * Standard des différentes parties de gauche
+ */
+
+.Standard{
+    border:0.4em solid #003240;
+    background-color: #00B4E6;
+    margin:1.5vw 2vw 0 1.5vw; /*top - right - bottom - left*/
+    padding-left:0.75vw;
+    padding-right: 0.75vw;
+    width: 69.5vw;
+}
+.Border{
+    border:0.4em solid #003240;
+    background-color: #00B4E6;
+}
+
+/*
+ * Standard pour Date actuelle et Pub
+ */
+#Standard_2{
+    float: right;
+    margin:1.5vw 1.5vw 0 2vw; /*top - right - bottom - left*/
+    padding-left:1.5vw;
+    width: 21vw;
+}
+/*
+ * Affichage de l'heure etc ...
+ */
+
+#Hours{
+    text-align: center;
+}
+#Hours > h1 {
+    text-decoration: underline;
+    margin:0;
+}
+.DateButton{
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+/*
+ *Pub
+ */
+
+#Pub{
+    margin-top:3vh;
+    text-align: center;
+} 
+#Pub > table{
+    border-collapse: collapse;
+    margin:0 auto;
+    width: 80%;
+}
+#Pub > table > thead > tr > td{
+    background-color: grey;
+    border: 0.3vh solid black;
+    font-size: 1.1em;
+}
+#Pub > table > tfoot > tr > td{
+    padding: 0.4vh 0 0.4vh 0;
+    background-color: grey;
+    border: 0.3vh solid black;
+}
+#echiquier > tr:nth-child(2n+1) > td:nth-child(2n){
+    background-color: grey;
+}
+#echiquier > tr:nth-child(2n+1) > td:nth-child(2n+1){
+    background-color:white;  
+}
+#echiquier > tr:nth-child(2n) > td:nth-child(2n+1){
+    background-color: grey;
+}
+#echiquier > tr:nth-child(2n) > td:nth-child(2n){
+    background-color:white;  
+}
+.echiquier_cellule{
+    border: 0.3vh solid black;
+    padding:0;
+    text-align: center;
+}
+.ImgEchiquier{
+    width: 80%;
+}
+#Pub > h1{
+    text-align: center;
+    text-decoration: underline;
+}
+#PrixArnaque{
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+/*
+ * Sommaire
+ */
+#Sommaire a{
+    text-decoration: none;
+    color: black;
+}
+#Sommaire > ol {
+    padding-left: 40px;
+}
+#Sommaire > h1{
+    text-decoration: underline;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+}
+  
+ol > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+}
+
+ol > li:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.6em;    
+}
+
+li ol > li {
+    margin: 0;
+}
+
+li ol > li:before {
+    content: counters(item, ".") " ";
+}
+.SommaireButton{
+    background-color:#00B4E6;
+    border:0;
+    font-size: 16px;
+    cursor:pointer;
+    padding:0;
+}
+/*
+ * Frise chronologique
+ */
+#FriseChronologique{
+    text-align:center;
+}
+#FriseChronologique > table{
+    background-color : grey;
+    padding:1em;
+    margin-top:3vh;
+    margin-bottom: 3vh;
+    margin-right:auto;
+    margin-left:auto;
+    
+}
+#FriseChronologique thead > td{
+    text-align: center;
+    text-decoration: underline;
+    padding:0;
+} 
+#FriseChronologique tbody > tr > td{
+    color : white;
+    padding:0.5vh;
+}
+#FriseChronologique td:hover{
+    border:3px solid grey;
+    cursor:pointer;
+}
+#FixTdBug{
+    background-color:darkred;
+}
+#FriseChronologique td:nth-child(2){
+    background-color:darkorange;
+}
+#FriseChronologique td:nth-child(3){
+    background-color:#bdbf0f;
+}
+#FriseChronologique td:nth-child(4){
+    background-color:darkgreen;
+}
+#FriseChronologique td:nth-child(5){
+    background-color:darkcyan;
+}
+#FriseChronologique td:nth-child(6){
+    background-color:#bf0f8d;
+}
+#FriseChronologique td:nth-child(7){
+    background-color:purple;
+}
+#FriseChronologique tfoot > tr > td > p {
+    padding:1vh;
+    margin-top:2vh;
+    color:white;
+    border:3px solid black;
+}
+
+
+
+/*
+ * Retour au sommaire
+ */
+
+#RevenirAuSommaire{
+    text-align: center;
+}
+
+/*
+ * Histoire des échecs
+ */
+#HistoireDesEchecs > h1,h2{
+    text-decoration: underline;
+}
+#HistoireDesEchecs > h2{
+    margin-left: 2vw;
+}
+#HistoireDesEchecs p {
+    margin-left: 4vw;
+}
+#HistoireDesEchecs > figure {
+    text-align: center;
+    margin-top:0;
+}
+#HistoireDesEchecs > figure > a > img{
+    width: 30vh;
+    height: auto;
+}
+#HistoireDesEchecs > figure > img{
+    width: 30vh;
+    height: auto;
+}
+/*
+ * "Footer"
+ */
+
+#End{
+    background-color: #222222;
+    margin-top: 1em;
+    margin-bottom: 0;
+    width: 100%;
+    position: absolute;
+}
+#End > p {
+    margin-left: 1em;
+}
+#End > p > input{
+    color:#83d0f2;
+    background-color: #222222;
+    border:0 solid black ;
+    cursor:pointer;
+}
+#End> p > input:hover{
+    text-decoration: underline;
+}
+.colorwhite{
+    color:white;
+}
+#Copyright{
+    margin-bottom: 0;
+    padding-bottom: 16px;
+}
+/*
+ * Pas de catégorie particulière
+ */
+.Underline{
+    text-decoration: underline;
+}
+
+body{
+    margin:0;
+    background-color:grey;
+}
+*:not(Menu){
+    z-index:1;
+}
+*{
+    font-family: 'Serif';
+}
+.NotMenuLink:visited{
+    color: purple;
+}

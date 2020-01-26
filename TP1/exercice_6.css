@@ -1,0 +1,26 @@
+p{
+	letter-spacing: 2px;
+	word-spacing: 15px;
+}
+.bold{
+	font-weight: bold;
+}
+.underline{
+	text-decoration: underline;
+}
+.italic{
+	font-style:italic;
+	color:#ff0000;
+}
+.scratched{
+	text-decoration: line-through;
+}
+.bigger{
+	font-size: 2em;
+}
+.smaller{
+	font-size: 0.5em;
+}
+.spaced{
+	letter-spacing: 2em;
+}

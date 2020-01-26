@@ -1,0 +1,25 @@
+p{
+    font-weight: bold;
+    font-size: 40px;
+}
+table{
+    border:2px blue solid;
+}
+.Blue{
+    background-color : #00ccff;
+    font-weight: 25px;
+}
+.Green{
+    background-color:#33cc33;
+    font-size: 20px;
+}
+.Grey{
+    background-color:grey;
+}
+.Orange{
+    background-color:orange;
+    font-size: 20px;
+}
+*{
+    text-align: center;
+}

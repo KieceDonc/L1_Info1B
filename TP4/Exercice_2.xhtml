@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+		PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<link href="Exercice_2.css" rel="stylesheet"/>
+	    <title>Formulaire</title>
+	</head>
+	<body>
+        <h1>Merci de payer la ou les cotisation(s) selon le(s ) sport(s)</h1>
+        
+        
+        <form class="fontsize" action="" method="get">
+
+            <fieldset class="form_o">
+                <legend>Choix du sport</legend>
+                <input type="checkbox" name="Handball" id="Hand" checked="checked"/>Handball><br />
+                <input type="checkbox" name="Football" id="Foot" />Football<br />
+                <input type="checkbox" name="Baseball" id="BaseB" />Baseball<br />
+                <input type="checkbox" name="BasketBall" id="BasketB" checked="checked"/>Basket-ball<br />
+            </fieldset>
+
+            <p>
+                <br /><br />
+                <span class="separator"></span>
+                <br />
+            </p>
+
+            <fieldset class="form_t">
+                <legend class="PaiementPar">Paiement par :</legend>
+                <input type="radio" name="CB" id="CB_" checked="checked"/>CB<span class="marginCB"></span>Votre code : <input type="text" name="code"/><br />
+                <input type="radio" name="Liquide" id="Liquide_" />Liquide<br />
+                <input type="radio" name="Cheque" id="Cheque_" />Chèque<br />
+            </fieldset>
+
+            <p>
+                <br /><br />
+                <span class="separator"></span>
+                <br />
+            </p>
+
+            <fieldset class="form_three">
+                <legend class="ZoneBouton">Zone bouton :</legend>
+                    <div class="buttonn">
+                    <button type="submit" value="Submit">Valider</button>
+                    <button type="reset" value="Reset">Effacer</button>
+                    </div>
+            </fieldset>
+        </form>
+	</body>
+</html>

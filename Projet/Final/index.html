@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+        <link href="css/index.css" rel="stylesheet" />
+        <title>Les échecs - Introduction</title>
+        <meta name="Author" content="Valentin Verstracte"/>
+        <meta name="Language" content="fr"/>
+        <meta name="Category" content="échecs" />
+        <meta name="Copyright" content="Verstracte inc."/>
+        <meta charset="UTF-8">
+</head>
+
+<body>
+        <div id="Menu">
+                <input class="MenuButton MenuOtherButton" type="button" value="◄─ Page précédente" onclick="OpenLink('html/LaCompetition.html');"/>
+                <input class="MenuButton MenuHomeButton MenuButtonMargin" type="button" value="Accueil" onclick="OpenLink('index.html');"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Les règles" onclick="OpenLink('html/LesRegles.html');"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Déroulement d'une partie" onclick="OpenLink('html/DeroulementDunePartie.html');"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Histoire des échecs" onclick="OpenLink('html/HistoireDesEchecs.html');"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="La compétition" onclick="OpenLink('html/LaCompetition.html');"/>
+                <input class="MenuButton MenuOtherButton" type="button" value=" Page suivante ─►" onclick="OpenLink('html/LesRegles.html');"/>
+        </div>
+        <div>
+                <img id="MenuImg" src="media/Menu_Banniere.jpg" alt="Bannière pour reconnaître le thème du site ( les échecs ) " /> 
+        </div>
+
+        <div id="Standard_2">
+                <div id="Hours" class="Border">
+                        <h1>Date actuelle :</h1>
+                        <p id="CurrentHour"></p>
+                        <p id="CurrentDate"></p>
+                        <input type="button" class="DateButton" value="Mettre à jour" onclick="CurrentDate();"/>
+                        <input type="button" class="DateButton" value="Affichage complet" onclick="AllCurrentDate();" />
+                </div>
+
+                <div id="Pub" class="Border">
+                        <h1>Pub</h1>
+                        <p>Envie de mettre les coups les plus fort contre votre adversaire comme ci-dessous ?</p>
+                        <table id="tableechiquier">
+                                <thead>
+                                        <tr>
+                                                <td colspan="8">
+                                                        Échiquier
+                                                </td>
+                                        </tr>
+                                </thead>
+                                <tbody id="echiquier">
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                </tbody>
+                                <tfoot>
+                                        <tr>
+                                                <td colspan="8">
+                                                        <select id="PubChess" onchange="Pub(this.value);">
+                                                                <option value="0" selected="selected">Par défaut</option>
+                                                                <option value="1">Coup du berger</option>
+                                                                <option value="2">Clouage</option>
+                                                                <option value="3">Fourchette</option>
+                                                        </select>
+                                                </td>
+                                        </tr>
+                                </tfoot>
+                        </table>
+                        <p>Envie d'être un Grand Maître des échecs ?<br /> N'attendez plus ! Acheter notre formation pour seulement<br /><span id="PrixArnaque">999$</span><br /> rendez-vous sur arnaque.com <!-- 999$ qui clignote de toutes les couleurs --> !</p>
+                </div>
+        </div>
+
+        <div id="Sommaire" class="Standard">
+                <h1 class="Underline">Sommaire</h1>
+                <ol>
+                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('#Partie1');" value="Introduction aux règles ainsi qu'au déroulement d'une partie"/></li>
+                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('#Partie2');" value="L'histoire des échecs"/></li>
+                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('#Partie3');" value="Introduction à la compétition aux échecs"/></li>
+                </ol>
+        </div>
+        
+        <div id="Introduction" class="Standard">
+
+                <h1 class="Underline">Introduction pour les pages de ce site.</h1>
+                
+                        <h2><span class="Underline" id="Partie1">1.</span> Présentation de leur règles ainsi que déroulement d'une partie</h2>
+                                <p>Chaque joueur commence avec 16 pièces: un roi, une reine, deux tours, deux cavaliers, deux fous et huit pions. Chaque type de pièce se déplace différemment, 
+                                le plus puissant étant la reine et le moins puissant, le pion. C'est pourquoi il est important de connaître tous les différentes règles<!--Lien interne--> pour pouvoir jouer correctement aux échecs. L'objectif 
+                                est de contrôler le roi de l'adversaire en le plaçant sous une menace de capture inéluctable. À cette fin, les pièces d'un 
+                                joueur sont utilisées pour attaquer et capturer les pièces de l'adversaire, tout en se soutenant mutuellement. Pendant le jeu, le jeu consiste généralement à échanger des pièces contre des pièces similaires à 
+                                celles de l'adversaire et à rechercher et exploiter des possibilités techniques permettant de négocier avantageusement ou d'obtenir une meilleure position. En plus d'un échec et mat, un joueur gagne la partie si son 
+                                adversaire abandonne ou si (dans une partie chronométrée) il ne reste plus beaucoup de temps. Il existe également plusieurs manières pour un jeu de se terminer par un match nul. Plus d'informations sur cette page <!--Lien interne-->
+                                </p>
+        
+                        <h2><span class="Underline" id="Partie2">2.</span> Résumé brief de l'histoire des échecs</h2>
+                                <p>Le jeu est joué par des millions de personnes à travers le monde. On pense que les échecs sont dérivés du jeu indien <a href="https://fr.wikipedia.org/wiki/Chaturanga" class="NotMenuLink">"chaturanga"</a> quelque temps avant le 7ème siècle. Chaturanga est également 
+                                l'ancêtre probable des jeux de stratégie orientaux xiangqi (échecs chinois), janggi (échecs coréens) et shogi (échecs japonais). Les échecs ont atteint l'Europe au 9ème siècle. Les règles modernes
+                                ont été normalisées au 19ème siècle. Si vous souhaitez en découvrir plus sur l'histoire des échecs rendez-vous sur <a href="html/HistoireDesEchecs.html" class="NotMenuLink">cette page.</a>
+                                </p>
+
+                        <h2><span class="Underline" id="Partie3">3.</span> La compétition</h2>
+                                <p>Le premier champion du monde d'échecs, Wilhelm Steinitz, a été annoncé en 1886. Depuis 1948, le championnat du monde est réglementé par la Fédération internationale des échecs (FIDE), l'organe directeur 
+                                international du jeu. La FIDE attribue également le titre Maître à vie à des joueurs de talent, dont le plus grand est Grandmaster (GM). De nombreuses organisations nationales d’échecs ont leur propre 
+                                système de titres. La FIDE organise également le championnat du monde féminin, le championnat mondial junior, le championnat mondial senior, les championnats du monde de blitz et de rapidité, ainsi que 
+                                l’Olympiade d’échecs, une compétition populaire parmi les équipes internationales. La FIDE est membre du Comité international olympique, ce qui peut être considéré comme une reconnaissance des échecs en 
+                                tant que sport. Il existe également un championnat du monde par correspondance et un championnat mondial d'échecs en informatique. Les échecs en ligne ont ouvert un large éventail de joueurs.
+                                Plus d'informations sur <a href="html/LesRegles.html" class="NotMenuLink">les règles</a> et les <a href="html/LaCompetition.html" class="NotMenuLink">différents types de tournois</a> rendez-vous sur leurs pages respectives.
+                                </p>
+                                <figure>
+                                        <a href="https://fr.wikipedia.org/wiki/Wilhelm_Steinitz"><img src="media/Index_Wilhelm_Steinitz.jpg" alt="Photo de Wilhelm Steinitz" /></a>
+                                        <figcaption>Photo de Wilhelm Steinitz, premier champion du monde d'échecs<br />Pour plus d'informations, cliquer sur sa photo.</figcaption>
+                                </figure>
+
+        </div>
+
+        <div id="Gallerie" class="Standard">
+                <h1 class="Underline">Gallerie du site</h1>
+                        <p>Découvre ici toutes les images / vidéo / musiques / autres que contient le site !</p>
+
+                        <div id="ImgGallerie">
+                                <h2>Les différentes images</h2>
+                                <div id="GalleriePrincipal">
+
+                                </div>
+                                <div id="GallerieMenu">
+
+                                </div>
+                                
+                                <div id="centeralign">
+                                                <input type="button" onclick="GallerieShowThis(GetImgsSlideLeft(),false);" value="< Précédente" />
+                                                <input type="button" onclick="GallerieShowThis(GetImgsSlideRight(),false);" value="Suivante >"/>
+                                        </div>  
+                        </div>
+
+                        <div id="VideoGallerie">
+                                <h2>La vidéo</h2>
+                                <video controls="controls" >
+                                    <source src="media/LaCompetition.mp4" type="video/mp4" />
+                                </video>
+                        </div>
+
+                        <div id="SonGallerie">
+                                <h2>Les sons</h2>
+                                <audio controls>
+                                <source src="media/Sound_win.mp3" type="audio/mpeg">
+                                </audio>
+                                <audio controls>
+                                <source src="media/Sound_loose.mp3" type="audio/mpeg">
+                                </audio>
+                        </div>
+                                 
+                <!--https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery-->
+        </div>
+
+        <div id="RevenirAuSommaire" class="Standard">
+                <a href="#Sommaire" class="NotMenuLink"><p>Revenir au sommaire</p></a>
+        </div>
+
+        
+        <div id="End">
+                <p><input type="button" onclick="Nop();" value="À propos de nous"/></p>
+                <p><input type="button" onclick="Nop();" value="Conditions d'utilisations" /></p>
+                <p class="colorwhite" id="Copyright">Copyright ©Verstracte 2019. All rights reserved.</p>
+        </div>
+
+        <script src="javascript/home.js"></script>
+</body>
+
+</html>

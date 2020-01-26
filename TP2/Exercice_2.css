@@ -1,0 +1,47 @@
+body{
+	background-color: #DDDD01;
+}
+blockquote{
+	font-style: italic;
+	font-size: 1.2em;	
+}
+li{
+	font-size: 1.2em;	
+}
+.BigTitle{
+	color: #271590;
+	margin-right: 20%;
+	margin-left: 20%;
+	border: 3px solid red;
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+}
+.LastL{
+	background-color:#FE80FE; 
+	list-style-type: square;
+}
+.IB{
+	font-weight: bold;
+	text-decoration: underline;
+		font-size: 1.3em;	
+}
+.changepu{
+	list-style-type: circle;
+}
+.LastL{
+	list-style-image: url('BoutonVert.gif');
+}
+blockquote{
+	margin-left:5%;	
+}
+/*.LastL li{
+	list-style-type: none;
+}
+.LastL li:before {
+  	content: "\25AA";
+  	float: left;
+  	color: green;
+  	width: 2em;
+  	margin-left: 0px;
+}

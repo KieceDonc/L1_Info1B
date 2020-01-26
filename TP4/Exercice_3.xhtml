@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+		PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<link href="Exercice_3.css" rel="stylesheet"/>
+	    <title>Formulaire</title>
+	</head>
+	<body>
+        <h1>Vos données</h1>
+
+        <form action="" method="post">
+            <h2 >Cliquez sur le bouton "Aléatoire pour tirer deux nombres entre -100 et 100</h2>
+                <p>
+                    A=<input type="text" name="ramdomA" class="BackgroundWhite Ramdom" />
+                    B=<input type="text" name="ramdomB" class="BackgroundWhite Ramdom" />
+                    <input type="submit" value="Aléatoire" class="BackgroundGrey BorderSpe" /><br />
+                </p>
+                <fieldset id="FieldsetSoluceUser">
+                    <legend>Votre solution</legend>
+
+                        <table id="TableUserSoluce">
+                            <tr>
+                                <td class="NameInputSoluceUser">A+B</td>
+                                <td><input type="text" name="AB_1" class="BackgroundWhite InputSoluceUser"/></td>
+                            </tr>
+                            <tr>
+                                <td class="NameInputSoluceUser">A-B</td>
+                                <td><input type="text" name="AB_2" class="BackgroundWhite InputSoluceUser"/></td>
+                            </tr>
+                            <tr>
+                                <td class="NameInputSoluceUser">A*B</td>
+                                <td><input type="text" name="AB_3" class="BackgroundWhite InputSoluceUser"/></td>
+                            </tr>
+                            <tr>
+                                <td class="NameInputSoluceUser">A/B</td>
+                                <td><input type="text" name="AB_4" class="BackgroundWhite InputSoluceUser" /></td>
+                            </tr>
+                            <tr>
+                                <td id="CheckSoluceUser" colspan="2"><input type="submit" value="Vérifier" class="BackgroundGrey"/><br /></td>
+                            </tr>
+                        </table>
+                        
+                </fieldset>
+
+                <fieldset id="FieldsetSoluce">
+                    <legend>La solution</legend>
+
+                        <table id="TableSoluce">
+                            <tr>
+                                <td>A+B</td>
+                                <td><input class="BackgroundGrey InputSoluce" type="text" name="AB_1_S" /></td>
+                            </tr>
+                            <tr>
+                                <td>A-B</td>
+                                <td><input class="BackgroundGrey InputSoluce" type="text" name="AB_2_S" /></td>
+                            </tr>
+                            <tr>
+                                <td>A*B</td>
+                                <td><input class="BackgroundGrey InputSoluce" type="text" name="AB_3_S" /></td>
+                            </tr>
+                            <tr>
+                                <td>A/B</td>
+                                <td><input class="BackgroundGrey InputSoluce" type="text" name="AB_4_S" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="BackgroundGrey BorderSpe" type="submit" value="Ok" /></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                </fieldset>
+
+        </form>
+	</body>
+</html>

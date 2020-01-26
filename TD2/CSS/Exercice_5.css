@@ -1,0 +1,9 @@
+.Cellule{
+    border:1px solid blue;
+    font-size: 1em;
+    width: 1.2em;
+    height: 1.2em;
+}
+table{
+    border-spacing: 0px 0px;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+		PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<link href="Exercice_5.css" rel="stylesheet"/>
+	    <title>Sudoku</title>
+	</head>
+	<body>
+        <h1>Veuillez saisir vos coordonnées dans le formulaire ci-dessous</h1>
+        <form action="" method="get">
+            <p>
+                <input type="radio" name="M" />M.
+                <input type="radio" name="Mme" checked="checked"/>Mme
+                <input type="radio" name="Mlle" />Mlle<br />
+
+                Nom : <input type="text" name="Nom" id="Nom"/>
+                Prénom : <input type="text" name="Prenom" id="Prenom"/>
+                Société : <input type="text" name="Societe" id="Societe"/><br />
+
+                    N° et rue : <input type="text" name="NetRue" id="NetRue"/><br />
+
+                Code Postal : <input type="text" name="CodePostal" id="CodePostal"/>
+                Ville : <input type="text" name="Ville" id="Ville"/> 
+                <select name="CountryChoose" id="CountryChoose">
+                        <option value="Angleterre" class="OptYellow">Angleterre</option>
+                        <option value="Allemagne" class="OptPurple">Allemagne</option>
+                        <option value="Australie" class="OptBlue">Australie</option>
+                        <option value="France" class="OptGrey" selected="selected">France</option>
+                        <option value="Italie" class="OptDark">Italie</option>
+                        <option value="Japon" class="OptWhite">Japon</option>
+                        <option value="USA" class="OptPurple">USA</option>
+                        <option value="Autre">Autre</option>
+                </select><br />
+
+                Votre message<input name="Msg" id="Msg" /><br />
+                Adresse E-Mail<input type="text" name="Nom" id="AdresseMail"/><br />
+
+                <input type="submit" value="Valider" id="submit" />
+                <input type="reset" value="Effacer" id="reset" />
+           </p>
+        </form>
+	</body>
+</html>

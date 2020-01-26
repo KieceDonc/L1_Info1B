@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<link href="../css/HistoireDesEchecs.css" rel="stylesheet" />
+	<title>Les échecs - leur Histoire</title>
+	<meta name="Author" content="Valentin Verstracte"/>
+	<meta name="Language" content="fr"/>
+	<meta name="Category" content="échecs" />
+	<meta name="Copyright" content="Verstracte inc."/>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<div id="Menu">
+		<input class="MenuButton MenuOtherButton" type="button" value="◄─ Page précédente" onclick="OpenLink('../html/DeroulementDunePartie.html')"/>
+		<input class="MenuButton MenuHomeButton MenuButtonMargin" type="button" value="Accueil" onclick="OpenLink('../index.html')"/>
+		<input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Les règles" onclick="OpenLink('../html/LesRegles.html')"/>
+		<input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Déroulement d'une partie" onclick="OpenLink('../html/DeroulementDunePartie.html')"/>
+		<input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Histoire des échecs" onclick="OpenLink('../html/HistoireDesEchecs.html')"/>
+		<input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="La compétition" onclick="OpenLink('../html/LaCompetition.html')"/>
+		<input class="MenuButton MenuOtherButton" type="button" value=" Page suivante ─►" onclick="OpenLink('../html/LaCompetition.html')"/>
+	</div>
+	<div>
+			<img id="MenuImg" src="../media/Menu_Banniere.jpg" alt="Bannière pour reconnaître le thème du site ( les échecs ) " /> 
+	</div>
+
+	<div id="Standard_2">
+			<div id="Hours" class="Border">
+					<h1>Date actuelle :</h1>
+					<p id="CurrentHour"></p>
+					<p id="CurrentDate"></p>
+					<input type="button" class="DateButton" value="Mettre à jour" onclick="CurrentDate();"/>
+					<input type="button" class="DateButton" value="Affichage complet" onclick="AllCurrentDate();" />
+	</div>
+
+	<div id="Pub" class="Border">
+			<h1>Pub</h1>
+			<p>Envie de mettre les coups les plus fort contre votre adversaire comme ci-dessous ?</p>
+			<table id="tableechiquier">
+					<thead>
+							<tr>
+									<td colspan="8">
+											Échiquier
+									</td>
+							</tr>
+					</thead>
+					<tbody id="echiquier">
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+							<tr>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+									<td class="echiquier_cellule"></td>
+							</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+								<td colspan="8">
+										<select id="PubChess" onchange="Pub(this.value);">
+												<option value="0" selected="selected">Par défaut</option>
+												<option value="1">Coup du berger</option>
+												<option value="2">Clouage</option>
+												<option value="3">Fourchette</option>
+										</select>
+								</td>
+						</tr>
+					</tfoot>
+			</table>
+			<p>Envie d'être un Grand Maître des échecs ?<br /> N'attendez plus ! Acheter notre formation pour seulement<br /><span id="PrixArnaque">999$</span><br /> rendez-vous sur arnaque.com <!-- 999$ qui clignote de toutes les couleurs --> !</p>
+		</div>
+	</div>
+
+	<div id="Sommaire" class="Standard">
+		<h1>Sommaire</h1>
+		<ol>
+			<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref1');" value="Une origine incertaine"/>
+				<ol>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref11');" value="Une origine indienne ?"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref12');" value="Une origine chinoise ?"/></li>
+				</ol>
+			</li>
+			<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref2');" value="Les légendes autour des échecs"/>
+				<ol>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref22');" value="Le mythe du brahmane Sissa"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref22');" value="La légende du grec Palamède"/></li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+
+	<div id="HistoireDesEchecs" class="Standard">
+		<h1 id="Ref1">1. Une origine incertaine</h1>
+			<p>Les échecs sont connus dans le monde entier, joués par de nombreux fans, mais leurs racines et leurs origines ne sont pas claires et sont très discutables. Il existe 
+			   une variété de légendes, d'histoires et de suppositions simples, à commencer par une dispute sur son origine.<br />
+
+			   Cependant, la plupart des gens peuvent convenir qu'il n'y a pas eu qu'un seul individu qui a inventé le jeu établi, car il est beaucoup trop complexe avec toutes ses 
+			   règles et concepts pour qu'un seul esprit humain ait créé.<br />
+
+			   Jusqu'à ce que Wilhelm Steinitz devienne le premier champion du monde d'échecs officiel en 1886, le jeu d'échecs évoluait constamment. 
+			   C’était un jeu que nous pourrions bien avoir du mal à reconnaître lorsque nous pensons aux échecs actuels: d’un jeu dominé par une prise de décision intuitive 
+			   à un combat entre deux moteurs.<br />
+
+			   Ainsi, dans l'article suivant, nous allons explorer les différentes racines du jeu d'échecs et vous apprendre l'histoire des échecs en quelques mots. 
+			</p>
+
+			<h2 id="Ref11">1.1. Une origine indienne ?</h2>
+				<p>Un jour, un homme appelé HJR Murray était désireux de se rapprocher des racines du jeu d’échecs.Il décida de partager ses découvertes avec le monde en écrivant un 
+				   livre, " Une histoire des échecs ", en 1913. Dans son livre, Murray suppose que l'histoire des échecs a commencé dans le nord de l'Inde , s'est ensuite rendue en 
+				   Perse, puis s'est répandue sur le continent asiatique. Dans le monde oriental, par exemple en Inde ou en Perse, les échecs sont devenus une partie de l’éducation 
+				   courtoise de la noblesse. En ces jours, des mots comme "Shāh! qui est le titre du monarque persan, et automatiquement le roi des échecs a été appelé le Shah ou 
+				   "Shāh Māt! ", Le roi est vaincu, ont été utilisés dans ces jeux. Ces mots sont très similaires aux termes que nous utilisons aujourd'hui avec “échec” et “échec et 
+				   mat”.<br />
+
+				   Les règles étaient déjà assez similaires aux règles des échecs que nous connaissons aujourd'hui. Murray décrit le moule d'origine des échecs, appelé Shatranj. 
+				   Ensuite, il présente le rôle des échecs médiévaux en Europe au Moyen Âge, comment ils ont voyagé du Moyen-Orient en Russie puis en Europe occidentale.<br />
+
+				   Enfin, dans la troisième partie de son livre sur l’histoire des échecs, l’auteur arrive au début des échecs modernes au 19 ème siècle tel que nous le connaissons aujourd’hui. 
+				<!-- Frise chronologique --> 
+				</p>
+
+			<h2 id="Ref12">1.2. Une origine chinoise ?</h2>
+				<p>Il n'y a pas que ceux qui croient que les échecs viennent d'Inde quoique cette croyance soit très populaire, mais certains pensent que les échecs ont été inventés en Chine.
+					La légende dit que les échecs ont été inventés vers 200 avant JC par un commandant, <a href="https://en.wikipedia.org/wiki/Han_Xin">Hán Xin</a>, qui a inventé le jeu pour représenter 
+					une bataille particulière.Peu de temps après la bataille, le jeu a été oublié et a refait surface au 7 ième siècle de notre ère avec plusieurs nouvelles règles.<br />
+
+					Le jeu est devenu populaire sous le nom de «XiangQi», qui signifie «jeu d'éléphant», perdant ainsi sa référence à la bataille antique. Le jeu des éléphants était 
+					très différent du jeu d'échecs que nous connaissons aujourd'hui. Ils avaient d'autres pièces, un autre échiquier et même d'autres règles. Selon cette croyance, 
+					les échecs sont ensuite passés de Chine à l'Inde et à la Perse, où ils se sont lentement transformés en jeu d'échecs que nous connaissons aujourd'hui avec un 
+					échiquier carré 8 × 8 et les pièces d'échecs que nous connaissons bien. 
+				</p>
+
+		<h1 id="Ref2">2. Les légendes autour des échecs</h1>
+
+			<h2 id="Ref21">2.1. Le mythe du brahmane Sissa</h2>
+				<p>Selon la légende, les échecs auraient été inventés par Sissa, fils du Brahmane Dahir et offerts en cadeau au roi Shirham d'Inde ( ou appelé Shihram suivant les versions ).
+					Le roi était si ravi qu'il lui offrit toute récompense qu'il demandait, à condition que cela paraisse raisonnable. Sissa demanda ce qui suit: "Un seul grain de blé sur la 
+					première case d'un échiquier. Ensuite, placez deux sur la deuxième case, quatre sur la suivante, puis huit, et continuez, en doublant le nombre de grains sur chaque case 
+					suivante, jusqu'à ce que chaque case de l'échiquier soit atteinte ".<br />
+
+				Intuitivement, le roi Shirham, comme presque tout le monde, a sous-estimé le nombre de grains et s'est moqué de Sissa parce qu'il avait demandé un si petit cadeau. 
+				Lorsqu'il a eu quelqu'un pour calculer le nombre total de grains, il a fallu plus d'une semaine pour qu'il revienne avec la solution. Le roi Shirham est sans aucun 
+				doute devenu très pâle quand il a eu la réponse: le nombre total de grains sur toutes les cases d'un échiquier serait de 18.446.744.073.709.551.615 grains. Ce qui 
+				représente la récolte de tout le blé du monde de plusieurs décennies.
+				</p>
+
+				<figure>
+						<a href="https://fr.wikipedia.org/wiki/Histoire_du_jeu_d%27%C3%A9checs#Le_mythe_du_brahmane_Sissa"><img src="../media/HistoireDesEchecs_Exemple_de_la_legende.jpg" alt="Exemple de la légende de Brahmane Sissa"/></a>
+						<figcaption>À la cinquième case, l'échiquier possède 16 grains de riz.</figcaption>
+				</figure>
+
+			<h2 id="Ref22">2.2. La légende du grec Palamède</h2>
+				<p>Au début de notre ère, Pausanias le Périégète attribuait l'invention du dé à palamède, un des héros de la mythologie grecque. Une légende, datant du Moyen Âge, 
+				   lui attribue la création du jeu d'échecs et place l'invention du jeu d'échecs durant la guerre de Troie3. Palamède aurait inventé le jeu d'échecs ainsi que d'autres
+				   jeux pour remonter le moral des troupes durant le siège de Troie : « Les Grecs lui attribuaient (à Palamède) l'invention de plusieurs lettres de leur alphabet, de la
+				   monnaie, des dés, des osselets et du jeu d'échecs »4,5. C'est l'origine du nom de la première revue échiquéenne, Le Palamède. </p>
+	</div>
+
+	<div id="FriseChronologique" class="Standard">
+		<table>
+			<thead>
+				<tr>
+				<td colspan="7"><h3>L'histoire des échecs</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td id="FixTdBug" onclick="FriseChronologique(0);">6ième siècle</td> <!---->
+				<td onclick="FriseChronologique(1);">10ième siècle</td>
+				<td onclick="FriseChronologique(2);">15ième siècle</td>
+				<td onclick="FriseChronologique(3);">1850 - 1950</td>
+				<td onclick="FriseChronologique(4);">1886</td>
+				<td onclick="FriseChronologique(5);">1997</td>
+				<td onclick="FriseChronologique(6);">2007 - Aujourd'hui</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+				<td colspan="7"><p>Cliquer sur la période que vous souhaitez découvrir!</p></td>
+				</tr>
+			</tfoot>
+		</table>
+    </div>
+
+    <div id="RevenirAuSommaire" class="Standard">
+                    <a href="#Sommaire" class="NotMenuLink"><p>Revenir au sommaire</p></a>
+    </div>
+
+
+    <div id="End">
+                    <p><input type="button" onclick="Nop();" value="À propos de nous"/></p>
+                    <p><input type="button" onclick="Nop();" value="Conditions d'utilisations" /></p>
+                    <p class="colorwhite" id="Copyright">Copyright ©Verstracte 2019. All rights reserved.</p>
+    </div>
+
+	<script src="../javascript/home.js"></script>
+</body>
+</html>

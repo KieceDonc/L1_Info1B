@@ -1,0 +1,50 @@
+.BigTitle{
+	max-width: 60%;
+	background-color: #000000;
+	color: #ffffff;
+	font-size: 4em;
+}
+body{
+	background-color: #A9A9A9;
+}
+.Yellowlist{
+	display: block;
+	background-color: #FFA600;
+	margin-left: 10%;
+	width: 80%;
+}
+.DefTitle{
+	color: #1214CB;
+	font-size : 1.5em;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.DefTitle_2{
+	color: #F92CAB;
+	font-size : 1.5em;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.Defpara{
+	font-size: 1.2em;
+}
+.and{
+	font-weight: bold;
+	text-decoration: overline;
+	color:#000000;
+}
+.bold{
+	font-weight: bold;
+}
+.tt{
+	background-color:grey;
+	color:#FFFFFF;
+	font-size:0.5em;
+}
+.gg{
+	background-color:#79e62c;	
+	color:#ffffff;
+}
+table{
+	border-collapse:collapse;
+}

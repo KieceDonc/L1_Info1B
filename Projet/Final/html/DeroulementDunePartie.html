@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+<head>
+        <meta charset="utf-8">
+        <link href="../css/DeroulementDunePartie.css" rel="stylesheet" />
+        <title>Les échecs - Déroulement d'une partie</title>
+        <meta name="Author" content="Valentin Verstracte"/>
+        <meta name="Language" content="fr"/>
+        <meta name="Category" content="échecs" />
+        <meta name="Copyright" content="Verstracte inc."/>
+</head>
+<body>
+    <div id="Menu">
+        <input class="MenuButton MenuOtherButton" type="button" value="◄─ Page précédente" onclick="OpenLink('../html/LesRegles.html')"/>
+        <input class="MenuButton MenuHomeButton MenuButtonMargin" type="button" value="Accueil" onclick="OpenLink('../index.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Les règles" onclick="OpenLink('../html/LesRegles.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Déroulement d'une partie" onclick="OpenLink('../html/DeroulementDunePartie.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Histoire des échecs" onclick="OpenLink('../html/HistoireDesEchecs.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="La compétition" onclick="OpenLink('../html/LaCompetition.html')"/>
+        <input class="MenuButton MenuOtherButton" type="button" value=" Page suivante ─►" onclick="OpenLink('../html/HistoireDesEchecs.html')"/>
+    </div>
+    <div>
+        <img id="MenuImg" src="../media/Menu_Banniere.jpg" alt="Bannière pour reconnaître le thème du site ( les échecs ) " /> 
+    </div>
+
+    <div id="Standard_2">
+        <div id="Hours" class="Border">
+                <h1>Date actuelle :</h1>
+                <p id="CurrentHour"></p>
+                <p id="CurrentDate"></p>
+                <input type="button" class="DateButton" value="Mettre à jour" onclick="CurrentDate();"/>
+                <input type="button" class="DateButton" value="Affichage complet" onclick="AllCurrentDate();" />
+        </div>
+
+        <div id="Pub" class="Border">
+                <h1>Pub</h1>
+                <p>Envie de mettre les coups les plus fort contre votre adversaire comme ci-dessous ?</p>
+                <table id="tableechiquier">
+                        <thead>
+                                <tr>
+                                        <td colspan="8">
+                                                Échiquier
+                                        </td>
+                                </tr>
+                        </thead>
+                        <tbody id="echiquier">
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                        </tbody>
+                        <tfoot>
+                                <tr>
+                                        <td colspan="8">
+                                                <select id="PubChess" onchange="Pub(this.value);">
+                                                        <option value="0" selected="selected">Par défaut</option>
+                                                        <option value="1">Coup du berger</option>
+                                                        <option value="2">Clouage</option>
+                                                        <option value="3">Fourchette</option>
+                                                </select>
+                                        </td>
+                                </tr>
+                        </tfoot>
+                </table>
+                <p>Envie d'être un Grand Maître des échecs ?<br /> N'attendez plus ! Acheter notre formation pour seulement<br /><span id="PrixArnaque">999$</span><br /> rendez-vous sur arnaque.com <!-- 999$ qui clignote de toutes les couleurs --> !</p>
+        </div>
+	</div>
+
+	<div id="Sommaire" class="Standard">
+		<h1>Sommaire</h1>
+		<ol>
+			<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref1');" value="Les ouvertures"/>
+				<ol>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref11');" value="Introduction"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref12');" value="L'ouvertures espagnol"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref13');" value="La défense sicilienne"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref14');" value="L'ouverture polonaise"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref15');" value="L'ouverture anglaise"/></li>
+				</ol>
+			</li>
+			<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref2');" value="Milieu de partie"/>
+				<ol>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref21');" value="La stragétie"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref22');" value="La transition vers la fin de partie"/></li>
+				</ol>
+			</li>
+			<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref3');" value="La fin de partie"/>
+			</li>
+			<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref4');" value="Les coups les plus connus"/>
+				<ol>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref41');" value="Le coup du berger"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref42');" value="La fourchette"/></li>
+					<li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref43');" value="Le clouage"/></li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+
+	<div id="DeroulementDunePartie" class="Standard">
+		<h1 id="Ref1">1. Les ouvertures</h1>
+			<p>Les premiers mouvements de l’ouverture d’échecs jettent les bases de chaque partie. La plupart des ouvertures d'échecs ont été nommées et analysées depuis des centaines d'années. 
+				Si vous voulez réussir aux échecs, il est important de connaître certaines des ouvertures les plus populaires et de comprendre la théorie qui sous-tend ces mouvements. Nous allons 
+				ici présenter certains des coups les plus connus portant un nom
+			</p>
+			<h2 id="Ref11">1.1. L'ouverture espagnol</h2>
+				<p>L'ouverture de <a href="https://fr.wikipedia.org/wiki/Ruy_L%C3%B3pez">Ruy Lopez</a> (également appelé l'espagnol) est une stratégie d'ouverture bien connue et très 
+					populaire. Elle commence avec 1. e4 e5 2.Cf3 Cc6 3.Fb5 et a beaucoup de variations.
+				</p>
+				<figure>
+					<a href="https://fr.wikipedia.org/wiki/Partie_espagnole"><img src="../media/DeroulementDunePartie_PartieEspagnol.jpg" alt="Exemple de l'ouverture espagnol"/></a>
+					<figcaption>Exemple de l'ouverture espagnol</figcaption>
+				</figure>
+			<h2 id="Ref12">1.2. La défense sicilienne</h2>
+				<p>La Défense sicilienne permet aux noirs d’attaquer le carré d4 et de se battre pour le centre sans la symétrie qui résulte de 1 ... e5. Cela conduit généralement à 
+					des positions déséquilibrées et laisse généralement au noir une majorité de pions centraux après avoir échangé ses points avec les Blancs.
+				</p>
+				<figure>
+					<a href="https://fr.wikipedia.org/wiki/D%C3%A9fense_sicilienne"><img src="../media/DeroulementDunePartie_DefenseSicilienne.jpg" alt="Exemple de la défense sicilienne"/></a>
+					<figcaption>Exemple de la défense sicilienne</figcaption>
+				</figure>
+			<h2 id="Ref13">1.3. L'ouverture polonaise</h2>
+				<p>L'ouverture Sokolsky (également appelée ouverture polonaise, attaque polonaise, orang-outan) concerne les ouvertures fermées et est considérée comme une ouverture irrégulière. 
+					Il occupe la neuvième place en popularité et est rarement joué dans les parties de haut niveau et les tournois officiels.
+				</p>
+				<figure>
+					<a href="https://fr.wikipedia.org/wiki/Ouverture_de_l'orang-outang"><img src="../media/DeroulementDunePartie_OuvertureSokolsky.jpg" alt="Exemple de l'ouverture Sokolsky"/></a>
+					<figcaption>Exemple de l'ouverture Sokolsky</figcaption>
+				</figure>
+			<h2 id="Ref14">1.4. L'ouverture anglaise</h2>
+				<p>L'ouverture anglaise est une ouverture d'échecs pour les Blancs qui se produit après le coup 1.c4. L’ouverture porte le nom d’ouverture anglaise car elle a été présentée et régulièrement jouée par le champion non officiel anglais du monde des échecs, <a href="https://fr.wikipedia.org/wiki/Howard_Staunton">Howard Staunton</a>, dans les années 1840 et 1850.<br />
+				C’est une ouverture de flanc, ce qui signifie que les blancs commencent en poussant le pion c au lieu des pions typiques e ou d.
+				</p>
+				<figure>
+					<a href="https://fr.wikipedia.org/wiki/Ouverture_anglaise"><img src="../media/DeroulementDunePartie_OuvertureAnglaise.jpg" alt="Exemple de l'ouverture anglaise"/></a>
+					<figcaption>Exemple de l'ouverture anglaise</figcaption>
+				</figure>
+
+		<h1 id="Ref2">2. Le milieu de partie</h1>
+			<h2 id="Ref21">2.1. La stratégie</h2>
+				<p>Aucun joueur d'échecs ne peut calculer une partie entière du début à la fin. Même les meilleurs programmes informatiques fonctionnant sur le matériel le plus rapide 
+				   ne peuvent "voir" qu'un nombre limité d'avancées. Au-delà de ce que vous pouvez calculer, vous devez compter sur une stratégie pour vous guider dans la recherche des
+				   meilleurs plans et mouvements dans une position donnée. <br />
+
+				La stratégie des échecs comprend un large éventail de concepts, allant de la valorisation des pièces à l'évaluation d'une position. La maîtrise de ces principes 
+				améliorera grandement votre compréhension des échecs. Par exemple, vos <a href="../html/LesRegles.html#Ref22">fous</a> 
+				<!-- La référence n'est pas exactement celle du fou mais de "La reine". Cela est totalement voulu. En effet, mon menu est fixe ( tout en haut )
+				et cache le texte quand on s'addresse directement à la référance ( Voila pourquoi ScrollToElement(ID) a été crée ). Seulement je n'ai pas réussi à utiliser
+				ScrollToElement(ID) d'une page à l'autre-->
+				sont assez puissants et peuvent constituer l'une de vos meilleures pièces pour la défense et l'offensive.
+			    </p>
+
+			<h2 id="Ref22">2.2. La transition vers la fin de partie</h2>
+				<p>Un autre problème stratégique important dans le milieu de partie est de savoir si et comment réduire le nombre de pièces et le transformer une victoire ou une fin 
+				   de partie. Toute réduction de matière n'est pas forcément bonne; par exemple, si un camp conserve un fou blanc et que son adversaire a un fou noir, la finalité est
+				   généralement avantageuse pour le camp le plus faible, car une fin de partie peut être un match nul, même avec un avantage de un ou deux pions.
+				</p>
+
+		<h1 id="Ref3">3. La fin de partie</h1>
+			<p>La ligne entre le milieu de partie et la fin est souvent floue et peut apparaître progressivement ou lors d’un échange rapide de pièces. Les pions deviennent plus 
+				importants dans la mesure où les parties finales tournent souvent autour de la tentative de <a href="../html/LesRegles.html#Ref133">promotion d'un pion</a> 
+				<!-- La référence n'est pas exactement celle de promotion d'un pion mais de "Le roque". Cela est totalement voulu. En effet, mon menu est fixe ( tout en haut )
+				et cache le texte quand on s'addresse directement à la référance ( Voila pourquoi ScrollToElement(ID) a été crée ). Seulement je n'ai pas réussi à utiliser
+				ScrollToElement(ID) d'une page à l'autre-->en le faisant passer pour une reine par exemple. Le roi, qui doit être protégé au milieu du jeu en raison de la menace d'un 
+				échec en échec, devient un élément fort du dernier. Il peut être amené au centre du tableau et constituer un élément d’attaque utile.
+			</p>
+
+		<h1 id="Ref4">4. Les coups les plus connus</h1>
+			<h2 id="Ref41">4.1. Le coup du berger</h2>
+				<p>Aux échecs, le coup du berger, ou mat du berger, illustre la faiblesse du pion f7 qui est le seul, en début de partie, à n'être défendu que par le roi. En l’attaquant 
+				   deux fois, avec le fou placé en c4 pour les blancs (en c5 pour les Noirs), et avec la dame placée en f3 ou h5 (f6 ou h4 pour les noirs), on peut mettre échec et mat au 
+				   coup suivant en prenant ce pion, comme le montre la partie :
+				</p>
+				<figure>
+					<img src="../media/DeroulementDunePartie_CoupDuBerger.jpeg" alt="Exemple du coup du berger"/>
+					<figcaption>Exemple du coup du berger</figcaption>
+				</figure>
+			<h2 id="Ref42">4.2. La fourchette</h2>
+				<p>Une fourchette se produit lorsqu'une pièce attaque deux pièces ou plus en même temps. L'adversaire se retrouve donc une position très délicate et doit choisir de 
+					sacrifier une pièce.
+				</p>
+				<figure>
+					<img src="../media/DeroulementDunePartie_Fourchette.gif" alt="Exemple d'une fourchette au pion"/>
+					<figcaption>Exemple d'une fourchette au pion</figcaption>
+				</figure>
+			<h2 id="Ref43">4.3. Le clouage</h2>
+				<p>Aux échecs, le clouage est une situation dans laquelle une pièce menacée ne peut pas se déplacer sans exposer une pièce de plus grandes valeurs à une capture. 
+				   est l'action d'attaquer une pièce adverse de façon à créer un clouage. La pièce directement attaquée est dite clouée.
+				</p>
+	</div>
+
+        <div id="Questionnaire" class="Standard">
+                <h1>Petit questionnaire</h1>
+                <form method="post" action="mailto:Valentin_Verstracte@etu.u-bourgogne.fr" onsubmit="return CheckForm();">
+                        <label>Votre email : <input type="email" name="email" oninput="DeleteBorder(0);" oninvalid="ShowBorder(0);"/></label><br />
+                        <label>Votre pseudo : <input type="text" name="pseudo" oninput="DeleteBorder(1);"  oninvalid="ShowBorder(1);"/></label><br />
+                        <label>Votre mot de passe :<input type="password" oninput="DeleteBorder(2);"  oninvalid="ShowBorder(2);"/></label><br />
+                        <label>Votre pays d'origine :
+                                <select name="Origine">
+                                        <optgroup label="Amérique du Nord">
+                                                <option value="Canada">Canada</option>
+                                                <option value="EtatsUnis">États-Unis</option>
+                                                <option value="AmeriqueDuNord_Autre">Autre</option>
+                                        </optgroup>
+                                        <optgroup label="Amérique du Sud">
+                                                <option value="Bresil">Brésil</option>
+                                                <option value="Argentine">Argentine</option>
+                                                <option value="AmeriqueDuSud_Autre">Autre</option>
+                                        </optgroup>
+                                        <optgroup label="Europe">
+                                                <option value="France">France</option>
+                                                <option value="Allemagne">Allemagne</option>
+                                                <option value="Default_Europe_Autre">Autre</option>
+                                        </optgroup>
+                                        <optgroup label="Afrique">
+                                                <option value="AfriqueDuSud">Afrique du sud</option>
+                                                <option value="Ethiopie">Éthiopie</option>
+                                                <option value="Afrique_Autre">Autre</option>
+                                        </optgroup>
+                                        <optgroup label="Asie">
+                                                <option value="Chine">Chine</option>
+                                                <option value="Inde">Inde</option>
+                                                <option value="Asie_Autre">Autre</option>
+                                        </optgroup>
+                                        <optgroup label="Océnanie">
+                                                <option value="Australie">Australie</option>
+                                                <option value="NouvelleZelande">Nouvelle-Zélande</option>
+                                                <option value="Oceanie_Autre">Autre</option>
+                                        </optgroup>
+                                        <optgroup label="Autre">
+                                                <option value="Autre" selected="selected">Autre</option>
+                                        </optgroup>
+                                </select>
+                        </label><br/>
+                        <label>Votre numéro de téléphone :<input type="tel" oninput="DeleteBorder(4);"  oninvalid="ShowBorder(5);"/></label>
+
+                        <p>Votre ouverture préférée ?</p> 
+                        <label><input type="radio" name="Entry" value="espagnol"/>L'ouverture espagnol</label>
+                        <label><input type="radio" name="Entry" value="sicilienne"/>La défense sicilienne</label>
+                        <label><input type="radio" name="Entry" value="polonaise"/>L'ouverture polonaise</label>
+                        <label><input type="radio" name="Entry" value="anglaise"/>L'ouverture anglaise</label><br />
+
+                        <p>Le(s) coup(s) que vous préféré(s) ?</p>
+                        <label><input type="checkbox" name="Play"/>Le coup du berger</label>
+                        <label><input type="checkbox" name="Play"/>La fourchette</label>
+                        <label><input type="checkbox" name="Play"/>Le clouage</label><br /><br />
+
+                        <label>Votre nombre de coups moyen ?<input type="number" name="Nmbr_play" oninput="DeleteBorder(12);"  oninvalid="ShowBorder(12);"/></label><br />
+                        <label>Votre couleur préféré au échecs ?<input type="color" name="Favorite_color"/></label><br />
+                        <p>Commentaires :</p><textarea cols="40" rows="5" name="Commentary" oninput="DeleteBorder(14);"  oninvalid="ShowBorder(14);"></textarea><br />
+                        <input class="QuestionnaireButton" type="submit" value="Envoyer"/>
+                        <input class="QuestionnaireButton" type="reset" value="Effacer" />
+                </form>
+        </div>
+	<div id="RevenirAuSommaire" class="Standard">
+		<a href="#Sommaire" class="NotMenuLink"><p>Revenir au sommaire</p></a>
+        </div>
+
+	<div id="End">
+			<p><input type="button" onclick="Nop();" value="À propos de nous"/></p>
+			<p><input type="button" onclick="Nop();" value="Conditions d'utilisations" /></p>
+			<p class="colorwhite" id="Copyright">Copyright ©Verstracte 2019. All rights reserved.</p>
+	</div>
+
+	<script src="../javascript/home.js"></script>
+</body>
+</html>

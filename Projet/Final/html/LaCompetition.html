@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<link href="../css/LaCompetition.css" rel="stylesheet" />
+		<title>Les échecs - La compétition</title>
+        <meta name="Author" content="Valentin Verstracte"/>
+        <meta name="Language" content="fr"/>
+        <meta name="Category" content="échecs" />
+        <meta name="Copyright" content="Verstracte inc."/>
+        <meta charset="UTF-8">
+</head>
+<body>
+    <div id="Menu">
+        <input class="MenuButton MenuOtherButton" type="button" value="◄─ Page précédente" onclick="OpenLink('../html/HistoireDesEchecs.html')"/>
+        <input class="MenuButton MenuHomeButton MenuButtonMargin" type="button" value="Accueil" onclick="OpenLink('../index.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Les règles" onclick="OpenLink('../html/LesRegles.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Déroulement d'une partie" onclick="OpenLink('../html/DeroulementDunePartie.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Histoire des échecs" onclick="OpenLink('../html/HistoireDesEchecs.html')"/>
+        <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="La compétition" onclick="OpenLink('../html/LaCompetition.html')" />
+        <input class="MenuButton MenuOtherButton" type="button" value=" Page suivante ─►" onclick="OpenLink('../index.html')"/>
+    </div>
+    <div>
+        <img id="MenuImg" src="../media/Menu_Banniere.jpg" alt="Bannière pour reconnaître le thème du site ( les échecs ) " /> 
+    </div>
+
+    <div id="Standard_2">
+        <div id="Hours" class="Border">
+                <h1>Date actuelle :</h1>
+                <p id="CurrentHour"></p>
+                <p id="CurrentDate"></p>
+                <input type="button" class="DateButton" value="Mettre à jour" onclick="CurrentDate();"/>
+                <input type="button" class="DateButton" value="Affichage complet" onclick="AllCurrentDate();" />
+        </div>
+
+        <div id="Pub" class="Border">
+                <h1>Pub</h1>
+                <p>Envie de mettre les coups les plus fort contre votre adversaire comme ci-dessous ?</p>
+                <table id="tableechiquier">
+                        <thead>
+                                <tr>
+                                        <td colspan="8">
+                                                Échiquier
+                                        </td>
+                                </tr>
+                        </thead>
+                        <tbody id="echiquier">
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                                <tr>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                        <td class="echiquier_cellule"></td>
+                                </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="8">
+                                        <select id="PubChess" onchange="Pub(this.value);">
+                                                <option value="0" selected="selected">Par défaut</option>
+                                                <option value="1">Coup du berger</option>
+                                                <option value="2">Clouage</option>
+                                                <option value="3">Fourchette</option>
+                                        </select>
+                                </td>
+                            </tr>
+                        </tfoot>
+                </table>
+                <p>Envie d'être un Grand Maître des échecs ?<br /> N'attendez plus ! Acheter notre formation pour seulement<br /><span id="PrixArnaque">999$</span><br /> rendez-vous sur arnaque.com <!-- 999$ qui clignote de toutes les couleurs --> !</p>
+        </div>
+    </div>
+    <div id="Sommaire" class="Standard">
+        <h1>Sommaire</h1>
+        <ol>
+            <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref1');" value="Les règles compétitives"/>
+                <ol>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref11');" value="La pendule"/></li>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref12');" value="Les irrégularités"/></li>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref13');" value="L'enregistrement des mouvements"/></li>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref14');" value="L'égalité"/></li>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref15');" value="La conduite des joueurs"/></li>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref16');" value="Décision de l'arbitre"/></li>
+                </ol>
+            </li>
+            <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref2');" value="Les différents types d'organisation de tournois"/>
+                <ol>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref21');" value="Tournoi toutes rondes"/></li>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref22');" value="Le système suisse"/></li>
+                    <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref22');" value="Élimination directe"/></li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    
+    <div id="LaCompetition" class="Standard">
+        <h1 id="Ref1">1. Les règles compétitives</h1>
+
+            <h2 id="Ref11">1.1. La pendule</h2>
+                <figure class="ImgRight">
+                    <a href="https://fr.wikipedia.org/wiki/Pendule_d%27%C3%A9checs"><img src="../media/LaCompetition_Pendule.JPG" alt="Exemple d'un pendule électronique"/></a>
+                    <figcaption>Pendule électronique</figcaption>
+                </figure>
+                <p>
+                Le pendule d'échecs est une horloge avec deux affichages de temps distincts, dont un seul peut être exécuté à la fois. Le joueur avec les pièces noires lancera le chronomètre de son 
+                adversaire au début de la partie. Ainsi, le joueur avec les pièces blanches aura son chronomètre en premier et fera le premier coup. Le joueur ou l'arbitre peut mettre fin à la partie
+                à tout moment après que son adversaire a dépassé sa limite de temps. Si une horloge expirée reste inaperçue, le jeu continuera normalement. Si le jeu doit être interrompu,
+                l'arbitre arrêtera le chronomètre.<br />
+
+                Les horloges d'échecs numériques constituent le choix privilégié en matière d'équipement dans les tournois.
+                </p>
+
+            <h2 id="Ref12">1.2. Les irrégularités</h2>
+                <p>                   
+                S'il s'avère que la position de départ des pièces est incorrecte, le jeu doit être annulé et redémarré. S'il s'avère qu'un mouvement illégal a été effectué, le jeu doit revenir à la 
+                position immédiatement avant l'irrégularité. Pour le premier coup illégal d'un joueur, l'arbitre accordera deux minutes supplémentaires à son adversaire à chaque fois. Si un joueur doit 
+                effectuer un deuxième coup illégal dans la même partie, l'arbitre doit déclarer la partie perdue par le joueur fautif. Si une partie commence avec les couleurs de la pièce inversées, 
+                la partie doit être arrêtée et redémarrée à moins qu'un arbitre n'en décide autrement.
+                </p>
+            
+            <h2 id="Ref13">1.3. L'enregistrement des mouvements</h2>
+                <figure class="ImgRight">
+                    <img src="../media/LaCompetition_Notation.png" alt="Exemple de notation d'une partie d'échecs"/>
+                    <figcaption>Exemple de notation d'une partie d'échecs</figcaption>
+                </figure>
+                <p>                 
+                Dans les parties de longue durée, chaque joueur doit <a href="https://fr.wikipedia.org/wiki/Notation_aux_%C3%A9checs#Enregistrement_des_coups">enregistrer tous les mouvements</a> de la partie en notation algébrique. Toutefois, si un joueur atteint moins de cinq 
+                minutes sur son chronomètre et n’a pas d’augmentation de trente secondes ou plus, il est dispensé d’enregistrer les coups restants jusqu’à ce que le jeu soit terminé. À la fin de la partie, 
+                les deux joueurs doivent signer les feuilles de match de chacun et les remettre aux organisateurs de l’événement, s’ils y sont invités. Dans les parties d'échecs rapides, les joueurs ne sont 
+                pas obligés d'enregistrer les mouvements, car cela priverait d'un temps de réflexion important. Les feuilles de match doivent être visibles à tout moment par l'arbitre.
+                </p>
+            
+            <h2 id="Ref14">1.4. L'égalité</h2>
+                <p>Un joueur doit faire son propre mouvement avant de proposer une égalité. De plus il ne doit pas arrêter son propre chronomètre et commencer le chronomètre de son adversaire avant qu'il ait fait 
+                l'offre. Si un joueur ne fait pas un coup avant d'offrir un tirage au sort, l'adversaire peut demander un coup avant de considérer l'offre (qui ne peut être rétractée). Aucune condition 
+                ne peut être attachée à une offre d'égalité. Si un joueur réclame un tirage au sort selon les règles du jeu d'échecs, il est autorisé à arrêter les deux horloges et à enregistrer la demande de tirage 
+                tant que son adversaire accepte la demande. Si l’opposant conteste le tirage au sort, le directeur peut être appelé à se prononcer. Si la réclamation est jugée correcte, c'est une égalité. Une fois qu'un 
+                joueur a effectué un mouvement depuis une position éligible pour un match nul, il perd son droit de réclamer un match nul à cette position.
+                </p>
+
+            <h2 id="Ref15">1.5. La conduite des joueurs</h2>
+                <p>Les joueurs ne sont pas autorisés à prendre des mesures susceptibles de discréditer le jeu. Par exemple, les tentatives délibérées de tricherie en insérant une pièce capturée sur l'échiquier peuvent être punies 
+                par cette règle, plutôt que par les règles relatives aux mouvements illégaux.<br />
+
+                Les joueurs ne peuvent utiliser aucune information extérieure. Cela inclut des conseils, des notes et l'analyse d'un autre joueur. Pendant le jeu, il est interdit à un joueur d’avoir un téléphone portable et / ou un 
+                autre moyen de communication électronique sur le lieu de jeu. S'il est évident qu'un joueur a apporté un tel dispositif dans la salle de jeu, il perd la partie. L'adversaire doit gagner. Les joueurs 
+                ne doivent en aucune manière distraire ou ennuyer leur concurrent. Une fois qu'un joueur a fini son jeu, il est considéré comme spectateur. Le refus d'un joueur de se conformer aux règles peut entraîner une pénalité
+                pouvant aller jusqu'à la disqualification du joueur. Si deux adversaires refusent tous deux d'obéir aux règles, le jeu peut être considéré comme perdu par les deux joueurs.
+                </p>
+
+            <h2 id="Ref16">1.6. Le rôle de l'arbitre</h2>
+                <p>Le travail de l'arbitre est de veiller à ce que les règles des échecs soient appliquées. Si une règle est enfreinte, l'arbitre peut choisir parmi plusieurs pénalités, notamment:<br />
+                </p>
+                    <ul class="FixMargin">
+                        <li>le joueur fautif</li>
+                        <li>augmenter le temps restant de l'adversaire</li>
+                        <li>réduire le temps restant du joueur fautif</li>
+                        <li>déclarer une partie perdue</li>
+                        <li>réduire les points marqués dans une partie par le joueur fautif</li>
+                        <li>augmenter les points marqués dans un match par l'adversaire</li>
+                        <li>l'expulsion du joueur fautif de l'événement.</li>
+                    </ul>
+                <p>
+                L’arbitre peut également expulser les spectateurs fautifs du lieu de la réunion. Il est également interdit aux spectateurs d'utiliser un téléphone portable à tout moment dans l'aire de jeu et 
+                ils peuvent être expulsés pour cet usage. Les fédérations membres sont autorisées à demander aux autorités de la FIDE<!-- Lien vers--> de prendre une décision officielle concernant les problèmes liés au droit des échecs.
+                </p>
+
+        <h1 id="Ref2">2. Les différents types d'organisation de tournois</h1>
+            <h2 id="Ref21">2.1. Tournoi à la ronde</h2>
+                <p>Dans les tournois à la ronde, chaque participant joue contre un autre à nombre égal de fois. Les tournois à la ronde sont souvent utilisés pour de petits groupes car l'élément 
+                de chance est réduit lorsque chaque joueur joue contre tout le monde. Les catégories de classement sont parfois utilisées pour séparer les joueurs de différents niveaux en différents 
+                groupes de tournoi à la ronde. La Fédération Mondiale des Échecs, la Fédération Australienne des Échecs et la Fédération Américaine des Échecs utilisent toutes des échelles de catégorisation 
+                différentes pour distinguer les capacités des joueurs. Le système de Scheveningen est similaire au style de tournoi à la ronde. Le système de Scheveningen est souvent utilisé pour faire face
+                à deux équipes d'échecs l'une contre l'autre, chaque joueur d'une équipe jouant chacun des joueurs de l'autre équipe.<br />
+
+                La plupart des tournois à la ronde utilisent le système de score traditionnel 1-1 / 2-0.<br/>
+                </p>
+                <div id="AlignImg">
+                    <figure>
+                            <img src="../media/LaCompetition_TournoiALaRonde.png" alt="Résultat d'un tournoi à la ronde"/>
+                            <figcaption>Exemple de résultat d'un tournoi à la ronde</figcaption>
+                    </figure>
+                </div>
+
+            <h2 id="Ref22">2.2. Le système suisse</h2>
+                <p>Un tournoi qui a trop de participants pour un format de tournoi à la ronde est généralement organisé comme un tournoi du système suisse. Dans le style suisse, les joueurs sont jumelés 
+                à des adversaires du même score. Par exemple, les joueurs avec six points affronteront d'autres joueurs avec six points (si possible), de sorte que le joueur ayant le plus de points à la
+                fin du tournoi soit le vainqueur. L'appariement de joueurs pour des tournois suisses est souvent assez compliqué en raison de contraintes non triviales:<br />
+                </p>
+                <ul class="FixMargin">
+                    <li>Les joueurs ne font pas face au même adversaire plus d'une fois.</li>
+                    <li>Les joueurs ne jouent souvent pas plus de deux fois avec la même couleur et, à la fin, la différence entre le nombre de jeux blancs et noirs ne devrait pas dépasser un.</li>
+                    <li>Les joueurs de la même fédération ne peuvent pas être jumelés au dernier tour pour éviter les matches truqués ou, dans des situations politiques, les joueurs de certaines 
+                    fédérations ne peuvent s'affronter.
+                    </li>
+                </ul>
+                <P>
+                De nos jours, les organisateurs de tournois utilisent couramment un logiciel de tournois d’échecs pour jumeler des joueurs<br />
+                    
+                En raison du pourcentage élevé de tirages au sort et de la faible il est relativement courant que les joueurs obtiennent le même score à la fin du tournoi. Bien que ce ne soit souvent 
+                pas un problème, étant donné que les joueurs à égalité se partagent souvent le prix. Cependant en cas de nécessité (trophée, qualifications pour d'autres tournois, etc.), il existe 
+                plusieurs moyens de déterminer le vainqueur :
+                </p>
+                <ul class="FixMargin">
+                    <li>Score de Sonneborn ( il s'agit de la somme des points des adversaires que le joueur a battus et la demi-somme des points des adversaires contre lesquels le joueur a annulé.)</li>
+                    <li>Nombre de victoires, nombre de victoires noires, etc.</li>
+                    <li>Une confrontation directe</li>
+                </ul>
+
+
+            <h2 id="Ref23">2.3. Élimination directe</h2>
+                <p>Les styles à élimination simple ou à élimination directe sont aussi parfois utilisés pour les tournois d'échecs. En fait, le premier tournoi international d'échecs s'est déroulé dans le style d'une élimination simple.
+                Dans les tournois à élimination directe, le perdant d'une partie est immédiatement éliminé du premier prix. Dans la plupart des tournois d'échecs à simple élimination, les joueurs ont une chance
+                de s'affronter pour des positions autres que les premières. Les tournois à double élimination fonctionnent de la même manière que les tournois à élimination unique, sauf qu'un joueur 
+                perd son admissibilité au premier prix après deux défaites.<br />
+
+                Étant donné que les échecs ont intrinsèquement l'avantage du premier coup pour les Blancs, pour assurer l'équité, les joueurs doivent s'affronter dans un nombre égal de jeux blancs et noirs. Par exemple, 
+                lors de la Coupe du monde d’échecs, les joueurs se font face lors de deux matchs classiques, à l’exception de la finale à 4 matchs.
+                </p>
+    </div>
+
+    <div id="VideoCompetition" class="Standard">
+        <h1>Exemple d'une partie compétitive</h1>
+                <div>
+                    <video controls="controls" >
+                        <source src="../media/LaCompetition.mp4" type="video/mp4" />
+                    </video>
+                    <p>Partie compétitive entre <a href="https://fr.wikipedia.org/wiki/Magnus_Carlsen">Magnus Carlsen</a> et <a href="https://fr.wikipedia.org/wiki/Aleksandr_Morozevitch">Morozevich</a> respectivement n°1 et n°2 mondial</p>
+                </div>
+    </div>
+
+    <div id="RevenirAuSommaire" class="Standard">
+                    <a href="#Sommaire" class="NotMenuLink"><p>Revenir au sommaire</p></a>
+    </div>
+
+
+    <div id="End">
+                    <p><input type="button" onclick="Nop();" value="À propos de nous"/></p>
+                    <p><input type="button" onclick="Nop();" value="Conditions d'utilisations" /></p>
+                    <p class="colorwhite" id="Copyright">Copyright ©Verstracte 2019. All rights reserved.</p>
+    </div>
+
+    <script src="../javascript/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="fr">
+<head>
+        <link href="../css/LesRegles.css" rel="stylesheet" />
+        <title>Les échecs - Les règles</title>
+        <meta name="Author" content="Valentin Verstracte"/>
+        <meta name="Language" content="fr"/>
+        <meta name="Category" content="échecs" />
+        <meta name="Copyright" content="Verstracte inc."/>
+        <meta charset="UTF-8">
+</head>
+
+<body>
+        <div id="Menu">
+                <input class="MenuButton MenuOtherButton" type="button" value="◄─ Page précédente" onclick="OpenLink('../index.html')"/>
+                <input class="MenuButton MenuHomeButton MenuButtonMargin" type="button" value="Accueil" onclick="OpenLink('../index.html')"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Les règles" onclick="OpenLink('../html/LesRegles.html')"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Déroulement d'une partie" onclick="OpenLink('../html/DeroulementDunePartie.html')"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="Histoire des échecs" onclick="OpenLink('../html/HistoireDesEchecs.html')"/>
+                <input class="MenuButton MenuOtherButton MenuButtonMargin" type="button" value="La compétition" onclick="OpenLink('../html/LaCompetition.html')"/>
+                <input class="MenuButton MenuOtherButton" type="button" value=" Page suivante ─►" onclick="OpenLink('../html/DeroulementDunePartie.html')"/>
+        </div>
+        <div>
+                <img id="MenuImg" src="../media/Menu_Banniere.jpg" alt="Bannière pour reconnaître le thème du site ( les échecs ) " /> 
+        </div>
+
+        <div id="Standard_2">
+                <div id="Hours" class="Border">
+                        <h1>Date actuelle :</h1>
+                        <p id="CurrentHour"></p>
+                        <p id="CurrentDate"></p>
+                        <input type="button" class="DateButton" value="Mettre à jour" onclick="CurrentDate();"/>
+                        <input type="button" class="DateButton" value="Affichage complet" onclick="AllCurrentDate();" />
+                </div>
+
+                <div id="Pub" class="Border">
+                        <h1>Pub</h1>
+                        <p>Envie de mettre les coups les plus fort contre votre adversaire comme ci-dessous ?</p>
+                        <table id="tableechiquier">
+                                <thead>
+                                        <tr>
+                                                <td colspan="8">
+                                                        Échiquier
+                                                </td>
+                                        </tr>
+                                </thead>
+                                <tbody id="echiquier">
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                                <td class="echiquier_cellule"></td>
+                                        </tr>
+                                </tbody>
+                                <tfoot>
+                                        <tr>
+                                                <td colspan="8">
+                                                        <select id="PubChess" onchange="Pub(this.value);">
+                                                                <option value="0" selected="selected">Par défaut</option>
+                                                                <option value="1">Coup du berger</option>
+                                                                <option value="2">Clouage</option>
+                                                                <option value="3">Fourchette</option>
+                                                        </select>
+                                                </td>
+                                        </tr>
+                                </tfoot>
+                        </table>
+                        <p>Envie d'être un Grand Maître des échecs ?<br /> N'attendez plus ! Acheter notre formation pour seulement<br /><span id="PrixArnaque">999$</span><br /> rendez-vous sur arnaque.com <!-- 999$ qui clignote de toutes les couleurs --> !</p>
+                </div>
+        </div>
+				  
+        <div id="Sommaire" class="Standard">
+                <h1>Sommaire</h1>
+                <ol>
+                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref1');" value="Les règles"/>
+                                <ol>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref11');" value="Le matériel nécessaire pour jouer"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref12');" value="Préparation et objectif"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref13');" value="Les règles spécifiques"/>
+                                                <ol>
+                                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref131');" value="En passant"/></li>
+                                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref132');" value="Pat"/></li>
+                                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref133');" value="Le roque"/></li>
+                                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref134');" value="Les différents types d'organisation de tournois"/></li>
+                                                </ol>
+                                        </li>
+                                </ol>
+                        </li>	
+                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref2');" value="Le déplacement des pièces"/>
+                                <ol>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref21');" value="Le roi"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref22');" value="La reine"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref23');" value="Le fou"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref24');" value="Le cavalier"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref25');" value="La tour"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref26');" value="Le pion"/></li>
+                                </ol>
+                        </li>
+                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref3');" value="La fin"/>
+                                <ol>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref31');" value="Échec et mat"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref32');" value="Défaite au temps"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref33');" value="Décision de l'arbitre"/></li>
+                                        <li><input type="button" class="SommaireButton" onclick="ScrollToElement('Ref34');" value="Abandon"/></li>
+                                </ol>
+                        </li>
+                </ol>
+        </div>
+
+        <div id="LesRegles" class="Standard">
+	    <h1 id="Ref1">1. Les règles</h1>
+	    	<h2 id="Ref11">1.1. Le matériel nécessaire pour jouer</h2>
+                        <p><a href="https://fr.wikipedia.org/wiki/%C3%89checs">Le jeu d'échecs</a> se joue sur un plateau à damier carré de 64 cases. Les pièces pour chaque joueur consistent en 8 points, 2 tours, 2 cavaliers, 2 fous, un roi et une reine. Les vraies couleurs des pièces et du tableau ne sont pas nécessairement noires et blanches, mais on les nomme noirs et blancs par convention. Le plateau est placé entre les deux adversaires de manière à ce que le coin près de la droite soit blanc pour les deux joueurs.<br />
+                           Pour <a href="LaCompetition.html">la compétition</a>, une horloge d'échecs est utilisée. Cela permet de garder une trace de la durée totale des mouvements de chaque joueur jusqu'à présent. Il y a une limite supérieure sur le temps total qu'un joueur peut prendre et quand le joueur dépasse cette limite, ce joueur perd.
+                        </p>
+                        <figure>
+                                <a href="https://fr.wikipedia.org/wiki/%C3%89chiquier"><img src="../media/LesRegles_ExempleEchiquier.jpg" alt="Exemple d'un échiquier avec ses pièces"/></a>
+                                <figcaption>Exemple d'un échiquier</figcaption>
+                        </figure>
+
+			<h2 id="Ref12">1.2. Préparation et objectif</h2>
+				<p>Les huit pions de chaque joueur sont placés sur la deuxième rangée la plus proche du joueur. Les pièces restantes sont placées sur la rangée la plus proche du joueur de la manière suivante: les tours dans chaque coin, les cavaliers sur la prochaine case du coin, les fous à côté des cavaliers. Des deux carrés restants, la reine est placée sur le carré de sa couleur. Le roi est placé sur la place restante.<br />
+
+				L'objectif du jeu est de capturer le roi du joueur adverse. Le roi n'est jamais réellement pris; Au lieu de cela, le but est de placer le roi adverse dans une position telle que le joueur adverse ne puisse rien faire pour éviter que le roi ne puisse se déplacer au tour suivant. Dès que cela se produit, le joueur victorieux qui vient de se déplacer dit "échec et mat" et la partie est terminée.
+				</p>
+
+			<h2 id="Ref13">1.3. Les règles spécifiques</h2>
+				<ul class="Fixbr">
+					<li><span class="Underline" id="Ref131">En passant :</span><br />
+						Si un pion de la cinquième rangée se trouve dans la situation où un pion adverse se déplace à côté de lui en se déplaçant pour la première fois et en choisissant de se déplacer de deux cases, le pion de la cinquième rangée peut prendre le pion adverse en avançant d'une case en diagonale. c'est-à-dire que le pion prend comme si le pion adverse n'avait déplacé qu'une case au lieu de deux.
+					</li>
+
+					<li><span class="Underline" id="Ref132">Pat :</span><br />
+						Le pat est une situation particulière dans laquelle le joueur ne peut jouer aucun coup légal, sans pour autant que son roi soit en échec. La partie se termine immédiatement et elle est déclarée nulle, c'est-à-dire sans vainqueur. 
+					</li>
+
+					<li><span class="Underline" id="Ref133">Le roque :</span><br />
+						Le roque consiste à déplacer en un seul coup le roi et l'une des tours. Il y a deux façons de roquer :<br />
+
+						<ul>
+						    	<li>avec le roi et la tour de la colonne h, ce déplacement s'appelle le « petit roque » .</li>
+						    	<li>avec le roi et la tour de la colonne a, ce déplacement s'appelle le « grand roque » car la tour effectue un déplacement plus grand (une case de plus).</li>
+						</ul>   
+
+						Les conditions suivantes sont nécessaires pour pouvoir roquer :<br />
+
+                                                <ul>
+                                                        <li>aucune pièce ne se trouve entre le roi et la tour concernée <br /></li>
+                                                        <li>le roi et la tour concernée n'ont encore jamais joué <br /></li>
+                                                        <li>le roi n'est pas en échec <br /></li>
+                                                        <li>la case traversée par le roi n'est contrôlée par aucune pièce adverse <br /></li>
+                                                </ul>				
+					</li>
+
+
+					<li><span class="Underline" id="Ref134">Promotion d'un pion :</span><br />
+                                                Lorsqu'un pion passe au huitième rang, il est promu et doit être remplacé par ce choix suivant : une reine, une tour, un fou ou un cavalier de la même couleur. Habituellement, le pion est choisi pour être promu en tant que reine, mais dans certains cas, le cavalier est choisi.
+                                                C'est ce qu'on appelle la sous promotion. Il permettra très probablement un échec et mat.
+					</li>
+				</ul>
+
+		<h1 id="Ref2">2. Le déplacement des pièces</h1>
+			<h2 id="Ref21">2.1. Le roi</h2>
+				<p>Le roi peut se déplacer dans n'importe quelle direction, mais seulement une case à la fois. Il doit être bien protégé tout au long du jeu car, même si vous pouvez perdre d'autres pièces lorsque le roi est piégé, vous perdez la partie!<br />
+
+				La valeur du roi n’est pas définie car elle ne peut être ni capturer ni échanger. Certains experts en échec prétendent que dans la phase finale, le roi vaut 4 pions. En effet, dans la plupart des matchs, il n'y a plus de danger pour le roi d'être mat. Il prend une pièce en se déplaçant sur sa case
+                                </p>
+                                <div class="AlignImg">
+                                        <figure>
+                                                <img src="../media/Pub_Black_King.png" alt="Présentation du roi noir" />
+                                                <figcaption>Roi noir</figcaption>
+                                        </figure>
+                                        <figure>
+                                                <img src="../media/Pub_White_King.png" alt="Présentation du roi noir" />
+                                                <figcaption>Roi blanc</figcaption>
+                                        </figure>
+                                </div>
+			<h2 id="Ref22">2.2. La reine</h2>
+				<p>La reine a la plus grande liberté de mouvement. Elle peut se déplacer en diagonale, horizontalement et verticalement autant de carrés que nécessaire.<br />
+
+				Grâce à cette grande puissance de mouvements, elle est la pièce d’échecs la plus précieuse sur l’échiquier après le roi, d’une valeur de 9 pions! Elle prend une pièce en se déplaçant sur sa case
+                                </p>
+                                <div class="AlignImg">
+                                                <figure>
+                                                        <img src="../media/Pub_Black_Queen.png" alt="Présentation de la reine noir" />
+                                                        <figcaption>Reine noir</figcaption>
+                                                </figure>
+                                                <figure>
+                                                        <img src="../media/Pub_White_Queen.png" alt="Présentation de la reine blanche" />
+                                                        <figcaption>Reine blanche</figcaption>
+                                                </figure>
+                                </div>
+
+			<h2 id="Ref23">2.3. Le fou</h2>
+				<p>Le fou domine les diagonales. Il peut aller et venir d'autant de cases que vous le souhaitez sur les diagonales mais ne reste que sur une case de couleur pour tout le jeu d'échecs.<br />
+
+					Il prend une pièce en se déplaçant sur sa case. La valeur du fou est égale à 3 pions.
+                                </p>
+                                <div class="AlignImg">
+                                                <figure>
+                                                        <img src="../media/Pub_Black_Bishop.png" alt="Présentation du fou noir" />
+                                                        <figcaption>Fou noir</figcaption>
+                                                </figure>
+                                                <figure>
+                                                        <img src="../media/Pub_White_Bishop.png" alt="Présentation du fou blanc" />
+                                                        <figcaption>Fou blanc</figcaption>
+                                                </figure>
+                                </div>
+
+			<h2 id="Ref24">2.4. Le cavalier</h2>
+				<p>Le cavalier en forme de cheval est la seule pièce d'échecs capable de sauter par-dessus d'autres pièces! Le chevalier se déplace en forme de L à partir de n’importe quelle case du plateau. Imaginez une forme en L composée de 3 carrés connectés, quelle que soit leur orientation. <br />
+
+				Cela signifie que chaque fois que le cavalier bouge, il tombe sur la couleur opposée à celle où il a commencé. Le chevalier prend d'autres pièces en atterrissant sur la place où elles se trouvent. La valeur du cavalier est égale à 3 pions.
+                                </p>
+                                <div class="AlignImg">
+                                                <figure>
+                                                        <img src="../media/Pub_Black_Knight.png" alt="Présentation du cavalier noir" />
+                                                        <figcaption>Cavalier noir</figcaption>
+                                                </figure>
+                                                <figure>
+                                                        <img src="../media/Pub_White_Knight.png" alt="Présentation du cavalier blanc" />
+                                                        <figcaption>Cavalier blanc</figcaption>
+                                                </figure>
+                                </div>
+
+			<h2 id="Ref25">2.5. La tour</h2>
+				<p>La tour est autorisée à se déplacer verticalement et horizontalement le long d'un échiquier. Il prend  n'importe quelle pièce en cours de route en se déplaçant sur sa case. C’est aussi précieux que 5 pions.
+				</p>
+                                <div class="AlignImg">
+                                                <figure>
+                                                        <img src="../media/Pub_Black_Tower.png" alt="Présentation de la tour noir" />
+                                                        <figcaption>Tour noir</figcaption>
+                                                </figure>
+                                                <figure>
+                                                        <img src="../media/Pub_White_Tower.png" alt="Présentation de la tour blanche" />
+                                                        <figcaption>Tour blanche</figcaption>
+                                                </figure>
+                                </div>
+
+			<h2 id="Ref26">2.6. Le poin</h2>
+				<p>Un pion peut généralement avancer d'une case. À partir de la position initiale, le pion peut même avancer de deux cases s'il le souhaite.<br />
+
+                                Si un pion veut prendre une autre pièce, il doit se déplacer d'une case en diagonale sur la pièce qu'il prend. Les pions, en tant que fantassins loyaux, ne sont autorisés qu'à avancer, mais jamais en arrière.
+                                </p>
+                                <div class="AlignImg">
+                                                <figure>
+                                                        <img src="../media/Pub_Black_Pawn.png" alt="Présentation du pion noir" />
+                                                        <figcaption>Pion noir</figcaption>
+                                                </figure>
+                                                <figure>
+                                                        <img src="../media/Pub_White_Pawn.png" alt="Présentation du pion blanc" />
+                                                        <figcaption>Pion blanc</figcaption>
+                                                </figure>
+                                </div>
+
+		<h1 id="Ref3">3. La fin</h1>
+			<h2 id="Ref31">3.1. Échec et mat</h2>
+				<p>
+					Lorsqu'une pièce est déplacée de manière à mettre le roi adverse en échec, le roi doit sortir de l'échec au tour suivant. Il n'y a que trois façons de le faire:
+                                </p> 
+                                <ul id="FixMargin">
+                                        <li>La pièce attaquante peut être prise par le roi ou une autre pièce.</li>
+                                        <li>Une autre pièce peut être déplacée entre la pièce attaquante et le roi (sauf si la pièce attaquante est un cavalier).</li>
+                                        <li>Le roi peut se déplacer sur une case adjacente non attaquée.</li>
+                                </ul>
+                                <p>
+					Si le roi ne peut pas échapper à l'un de ces moyens, le joueur qui met le roi en échec dit "échec et mat" au lieu de "échec" et la partie se termine.
+				</p>
+
+			<h2 id="Ref32">3.2. Défaite au temps</h2>
+				<p>Dans une partie à la pendule, un des deux joueurs peut être à court de temps de réflexion et finir par perdre pour dépassement de son quota, cela même si sa position est nettement supérieure
+				</p>
+
+			<h2 id="Ref33">3.3. Décision de l'arbrite</h2>
+				<p>L'arbrite peut décider de mettre fin à la partie pour non-respect du règlement (retard ou absence à une partie, tricherie, sonnerie de téléphone pendant la partie). Plus d'informations sur la compétition au échecs <!-- Lien vers la page Compétition --></p>
+
+			<h2 id="Ref34">3.4. Abandon</h2>
+				<p>Une fois que l'on pense que le joueur adverse va inévitablement gagner, un joueur abandonne normalement pour gagner du temps. Un joueur abandonne traditionnellement en basculant son roi.
+				</p>
+        </div>
+
+        <div id="PetitQuiz" class="Standard">
+                <h1>Petit quiz :</h1>
+                        <p>Vous apprenez les échecs et vous souhaiter vérifier vos connaissances? Voici un petit quiz !</p>
+                        <ol class="Fixbr">
+                                <li>Combien de cases y-a-t-il sur un échiquier ?<br />
+                                        <input type="radio" name="Q1" value="1"/><span>50 cases</span>
+                                        <input type="radio" name="Q1" value="2"/><span>64 cases</span>
+                                        <input type="radio" name="Q1" value="3"/><span>78 cases</span>
+                                </li>
+                                <li>Au début de la partie, chaque joueur dispose de:<br />
+                                        <input type="radio" name="Q2" value="1"/><span>14 pièces</span>
+                                        <input type="radio" name="Q2" value="2"/><span>16 pièces</span>
+                                        <input type="radio" name="Q2" value="3"/><span>18 pièces</span>
+                                </li>
+                                <li>Les deux joueurs ont commencé par placer leur Roi et leur Dame sur l’échiquier comme indiqué dans le diagramme ci-contre.<br />Qu’en pensez-vous ?<br />
+                                        <img src="../media/LesRegles_Quiz_Q3.jpg" alt="image pour le quizz" /><br />
+                                        <input type="radio" name="Q3" value="1"/><span>Aucun des deux joueurs n’a bien placé ses pièces?</span><br />
+                                        <input type="radio" name="Q3" value="2"/><span>Les Blancs ont bien placé leurs pièces mais pas les Noirs</span><br />
+                                        <input type="radio" name="Q3" value="3"/><span>Les Noirs ont bien placé leurs pièces mais pas les Blancs</span><br />
+                                        <input type="radio" name="Q3" value="4"/><span>Les deux joueurs ont bien placé leurs pièces</span><br />
+                                </li>
+                                <li>Une pièce peut sauter au-dessus d’une autre pièce:<br />
+                                        <input type="radio" name="Q4" value="1"/><span>Jamais</span>
+                                        <input type="radio" name="Q4" value="2"/><span>Toujours</span>
+                                        <input type="radio" name="Q4" value="3"/><span>Seul la Cavalier peut sauter au-dessus des autres pièces</span>
+                                </li>
+                                <li>Qui commence la partie ?<br />
+                                        <input type="radio" name="Q5" value="1"/><span>Toujours les Blancs</span>      
+                                        <input type="radio" name="Q5" value="2"/><span>Toujours les Noirs</span>
+                                        <input type="radio" name="Q5" value="3"/><span>Comme le veulent les deux joueurs</span>
+                                </li>
+                                <li>Si un Roi bouge puis revient sur sa case initiale:<br />
+                                        <input type="radio" name="Q6" value="1"/><span>Il peut à nouveau roquer</span>
+                                        <input type="radio" name="Q6" value="2"/><span>Il ne peut plus roquer</span>
+                                </li>
+                        </ol>
+                        
+                        <div>Avertissement, un petit son serra jouer si vous perdez ou gagnez.</div>
+                        <div id="QuizInputcenter"><input type="button" value="Vérifier" onclick="CheckQuiz();"/></div>
+        </div>
+
+        <div id="RevenirAuSommaire" class="Standard">
+                        <a href="#Sommaire" class="NotMenuLink"><p>Revenir au sommaire</p></a>
+        </div>
+
+        
+        <div id="End">
+                        <p><input type="button" onclick="Nop();" value="À propos de nous"/></p>
+                        <p><input type="button" onclick="Nop();" value="Conditions d'utilisations" /></p>
+                        <p class="colorwhite" id="Copyright">Copyright ©Verstracte 2019. All rights reserved.</p>
+        </div>
+
+        <script src="../javascript/home.js"></script>
+</body>
+
+</html>

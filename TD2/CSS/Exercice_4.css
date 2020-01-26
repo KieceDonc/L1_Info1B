@@ -1,0 +1,11 @@
+h1{
+    text-align:center;
+}
+p{
+    color:red;
+}
+#Separator{
+    width: 100vw;
+    height: 0.2vw;
+    background-color:black;
+}

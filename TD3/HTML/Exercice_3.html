@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <link href="../CSS/Exercice_3.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+</head>
+<body>
+    <h1>Vos données</h1>
+
+        <h2 >Cliquez sur le bouton "Aléatoire pour tirer deux nombres entre -100 et 100</h2>
+            <p>
+                A=<input type="text" id="Ramdom0" class="BackgroundWhite Ramdom" />
+                B=<input type="text" id="Ramdom1" class="BackgroundWhite Ramdom" />
+                <input type="submit" value="Aléatoire" class="BackgroundGrey BorderSpe" onclick="Alea();"/><br />
+            </p>
+            <h3>Votre solution</h3>
+
+                <table id="TableUserSoluce">
+                    <tr>
+                        <td class="NameInputSoluce">A+B</td>
+                        <td><input  type="text" class="AB BackgroundWhite Input"/></td>
+                    </tr>
+                    <tr>
+                        <td class="NameInputSoluce">A-B</td>
+                        <td><input type="text" class="AB BackgroundWhite Input"/></td>
+                    </tr>
+                    <tr>
+                        <td class="NameInputSoluce">A*B</td>
+                        <td><input type="text" class="AB BackgroundWhite Input"/></td>
+                    </tr>
+                    <tr>
+                        <td class="NameInputSoluce">A/B</td>
+                        <td><input type="text" class="AB BackgroundWhite Input" /></td>
+                    </tr>
+                    <tr>
+                        <td id="CheckSoluceUser" colspan="2"><input onclick="Verifier();" type="submit" value="Vérifier" class="BackgroundGrey"/><br /></td>
+                    </tr>
+                </table>
+
+                    
+
+<h3>La solution</h3>
+
+    <span>A+B</span>
+    <span><input class="BackgroundGrey Input ABS" type="text"/></span>
+    <span>A-B</span>
+    <span><input class="BackgroundGrey Input ABS" type="text"/></span>
+    <span>A*B</span>
+    <span><input class="BackgroundGrey Input ABS" type="text"/></span>
+    <span>A/B</span>
+    <span><input class="BackgroundGrey Input ABS" type="text"/></span>
+
+    <input class="BackgroundGrey BorderSpe" type="submit" value="Ok" onclick="Solution();"/>
+    <script src="../JS/Exercice_3.js"></script>
+</body>
+</html>

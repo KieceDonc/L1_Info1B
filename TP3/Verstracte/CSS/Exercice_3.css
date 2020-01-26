@@ -1,0 +1,37 @@
+h1,#Day,.Hours,.Days{
+	font-weight:bold;
+}
+table,td{
+	border:1px solid red;
+	text-align: center;
+	border-spacing: 0;
+}
+.SPE{
+	border:1.5px solid red;
+	width: 100px;
+	text-align:center;
+}
+td{
+	width: 100px;
+}
+.Days{
+	color:#FF00FE;
+	text-decoration: underline;
+}
+.Miam{
+	background-color:#ff8cdb;
+	color:#ffffff;
+}
+.CM{
+	background-color: #03fcec;
+}
+.TPTD{
+	background-color: #fcb103;
+}
+.Sport{
+    background-color:#cfdfd8;
+    color:black;
+}
+.backgroundblack{
+	background-color: black;
+}

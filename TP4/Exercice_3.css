@@ -1,0 +1,53 @@
+h2, p{
+    margin-left: 7vw;
+}
+*{
+    background-color:#2eb8b8;
+}
+.BackgroundWhite, .LabelSoluceUser{
+    background-color: white;
+}
+.BackgroundGrey{
+    background-color: #cdcdcd;
+}
+.Ramdom{
+    width: 6em;
+    margin-right: 4em;
+}
+.LabelSoluceUser{
+    width: 16em;
+
+}
+#FieldsetSoluceUser > table {
+    margin: 0 0 0 2em;
+    
+}
+/*.SoluceUser > table > tr > td:nth-child(1):not(#CheckSoluceUser){*/
+.NameInputSoluceUser{
+    background: white;
+    text-align: center;
+    color: red;
+}
+#CheckSoluceUser{
+    padding-top:1em;
+    text-align: center;
+}
+.InputSoluceUser{
+    width: 8em;
+    border: 1.5px groove grey;
+}
+#TableSoluce{
+    margin-left:4em;
+}
+#FieldsetSoluce,#FieldsetSoluceUser{
+    width:1em;
+}
+#TableUserSoluce{
+    border:2px solid black;
+}
+.InputSoluce{
+    width: 8em;
+}
+.BorderSpe, .InputSoluce, .Ramdom{
+    border: 1.5px groove grey;
+}

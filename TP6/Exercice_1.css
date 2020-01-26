@@ -1,0 +1,46 @@
+body{
+	background-color: #FFA9AC;
+	font-style: none;
+}
+h1{
+	text-align: center;
+	text-decoration: underline black;
+	
+}
+.aligntop{
+	vertical-align: top;
+}
+#img1{
+	float: left;
+}
+#img2{
+	float: right;
+}
+.bordertop{
+	border-top: 3px gray solid; 
+}
+.text_1{
+	font-size: 1.2em;
+
+}
+.bold_effect{
+	font-weight: bold;
+}
+.underline_effect{
+	text-decoration: underline;
+}
+.RedB{
+	background-color: red;
+	margin-left:20%;
+	margin-right: 20%;
+	height: 20px;
+	width: 60%;
+
+}
+.GreenB{
+	background-color: green;
+		margin-left:20%;
+	margin-right: 20%;
+	height: 20px;
+	width: 60%;
+}

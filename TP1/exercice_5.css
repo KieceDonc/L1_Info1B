@@ -1,0 +1,20 @@
+.Taille_7em{
+	font-size: 7em;
+}
+.Taille_6em{
+	font-size: 6em;
+}
+.Taille_5em{
+	font-size: 5em;
+}
+.Taille_4em{
+	font-size: 4em;
+}
+#C{color: #ff0000;}
+#o{color: #0000ff;}
+#u_1{color: #37f8d3;}
+#l{color: #ff00ff;}
+#e{color: #000000;}
+#u_2{color: #123456;}
+#r{color: #324890;}
+#C,#o,#u_1,#l,#e,#u_2,#r{font-size: 5em;}

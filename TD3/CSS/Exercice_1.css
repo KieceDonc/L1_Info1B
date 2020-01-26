@@ -1,0 +1,19 @@
+﻿#Output{
+    height: auto;
+    padding:18.5px;
+    margin:18.5px;
+    border:4px dashed red; 
+}
+body{
+    background-color:#4dba20;
+    color:red;
+}
+p{
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+span{
+    background-color:red;
+    text-decoration: underline;
+    color:#1fdacf;
+}

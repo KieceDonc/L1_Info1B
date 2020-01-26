@@ -1,0 +1,23 @@
+h1, #s{
+	font-weight:bold;
+}
+table,td{
+	border:3px solid blue;
+}
+td{
+	width: 5px;
+	text-align: center;
+}
+#s > td {
+	height: 100px;
+	font-weight: bold;
+}
+table{
+	border-spacing: 20px;
+}
+*:not(h1){
+	font-size:30px;
+}
+h1{
+	font-size:60px;
+}

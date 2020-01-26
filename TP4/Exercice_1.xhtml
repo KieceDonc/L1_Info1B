@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+		PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<link href="Exercice_1.css" rel="stylesheet"/>
+	    <title>Formulaire</title>
+	</head>
+	<body>
+        <h1>Merci de payer la ou les cotisation(s) selon le(s ) sport(s)</h1>
+        
+        <form class="form_o" action="" method="get">
+            <p>
+                <span class="fontsize">
+                    <input type="checkbox" name="Handball" id="Hand" checked="checked"/>Handball<br />
+                    <input type="checkbox" name="Football" id="Foot" />Football<br />
+                    <input type="checkbox" name="Baseball" id="BaseB" />Baseball<br />
+                    <input type="checkbox" name="BasketBall" id="BasketB" checked="checked"/>Basket-ball<br /> 
+                </span>
+            </p>
+        </form>
+        
+        <p>
+            <br />
+            <br />
+            <span class="separator"></span>
+            <br />
+        </p>
+
+        <form class="form_t" action="" method="get">   
+            <p>
+                <span class="fontsize">
+                    <span class="PaiementPar">Paiement par :</span><br />
+                    <input type="radio" name="CB" checked="checked" id="CB"/>CB<span class="marginCB"></span>Votre code : <input type="text" name="code"/><br />
+                    <input type="radio" name="Liquide" />Liquide<br />
+                    <input type="radio" name="Cheque" />Chèque<br />
+                </span>
+
+                <button type="submit" value="Submit" class="no">Valider</button>
+                <button type="reset" value="Reset" class="no">Effacer</button>
+            </p>
+        </form>
+	</body>
+</html>
